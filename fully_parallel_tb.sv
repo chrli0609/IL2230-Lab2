@@ -5,16 +5,16 @@ module fully_parallel_tb #(parameter N = 2, QM = 12, QN = 20, WM = 6, WN = 10, O
   // Testbench signals
   logic clk;
   logic rst_n;
-  logic [31:0] in_data [N-1:0];
-  logic [15:0] weights [N-1:0];
+  logic signed [31:0] in_data [N-1:0];
+  logic signed [15:0] weights [N-1:0];
   logic bias;
   logic [7:0] out_data;
 
 
-  logic [QM + QN + N - 1:0] mac_sum;
+  logic signed [QM + QN + N - 1:0] mac_sum;
   logic [7:0] expected_out;
   logic [7:0] out_not_registered_tb;
-  logic [QM + QN + N - 1:0] mac_final_tb;
+  logic signed [QM + QN + N - 1:0] mac_final_tb;
 
 
 
@@ -63,8 +63,10 @@ always @(posedge clk, negedge rst_n) begin
       
       bias = $random;
       for (int i = 0; i < N; i++) begin
-       weights[i] = $urandom_range(0,10);
-       in_data[i] = $urandom_range(0,10);
+        weights[i] = $urandom_range(0,10);
+        in_data[i] = $urandom_range(0,10);
+        weights[i] = weights[i] - 5; 
+        in_data[i] = in_data[i] - 5;
       end
 
 

@@ -5,8 +5,8 @@
 //QM is integer, QN is fraction
 module fully_parallel #(parameter N = 2, parameter QM = 12, parameter QN = 20, parameter WM = 6, parameter WN = 10, parameter OB = 8) (
     input logic clk, rst_n,
-    input logic [31:0] in [N-1:0],
-    input logic  [15:0] weights [N-1:0],
+    input logic signed [31:0] in [N-1:0],
+    input logic signed [15:0] weights [N-1:0],
     input logic bias,
     output logic [7:0] out
 );
