@@ -15,12 +15,14 @@ module fully_parallel_tb #(parameter N = 2, QM = 12, QN = 20, WM = 6, WN = 10, O
   logic [7:0] expected_out;
   logic [7:0] out_not_registered_tb;
   logic signed [QM + QN + N - 1:0] mac_final_tb;
+  logic [QM + QN + WM + WN + N - 1:0] mac_out_tb [N-1:0];
 
 
 
 
   assign out_not_registered_tb = dut.out_not_registered;
   assign mac_final_tb = dut.mac_final;
+  assign mac_out_tb = dut.mac_out;
 
   // Instantiate the neuron module
   fully_parallel #(N, QM, QN, WM, WN, OB) dut (
