@@ -63,8 +63,8 @@ always @(posedge clk, negedge rst_n) begin
       
       bias = $random;
       for (int i = 0; i < N; i++) begin
-       weights[i] = $urandom_range(0,10)-5;
-       in_data[i] = $urandom_range(0,10)-5;
+       weights[i] = $urandom_range(0,10);
+       in_data[i] = $urandom_range(0,10);
       end
 
 
