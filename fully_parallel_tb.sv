@@ -38,7 +38,7 @@ module fully_parallel_tb #(parameter N = 2, QM = 12, QN = 20, WM = 6, WN = 10, O
   // Test procedure
   initial begin
     // Initialize inputs
-    rst_n = 0;
+    rst_n = 1;
     bias = 0;
 
     for (int i = 0; i < N; i++) begin
