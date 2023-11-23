@@ -68,18 +68,27 @@ always @(posedge clk, negedge rst_n) begin
       end
 
 
-      #5;
+      #2;
 
       mac_sum = 0;
       for (int i = 0; i<N; i++) begin
         mac_sum = mac_sum + in_data[i]*weights[i];
       end
+      #1;
 
       expected_out = mac_sum[QM + QN + N - 1] ? 0 : mac_sum;
-      
+      #1;
 
       assert(expected_out == out_data) $display("TEST PASSED");
-      else $error("TEST FAILED");
+      else $error("TEST FAILED\n",
+        "in[0]: %d\n", in_data[0],
+        "in[1]: %d\n", in_data[1],
+        "weights[0]: %d\n", weights[0],
+        "weights[1]: %d\n", weights[1],
+        "mac_sum: %d\n", mac_sum,
+        "expected_out: %d\n", expected_out,
+        "out_data: %d\n", out_data
+        );
 
 end
 
