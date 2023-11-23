@@ -13,6 +13,14 @@ module fully_parallel_tb #(parameter N = 2, QM = 12, QN = 20, WM = 6, WN = 10, O
 
   logic [QM + QN + N - 1:0] mac_sum;
   logic [7:0] expected_out;
+  logic [7:0] out_not_registered_tb;
+  logic [QM + QN + N - 1:0] mac_final_tb;
+
+
+
+
+  assign out_not_registered_tb = dut.out_not_registered;
+  assign mac_final_tb = dut.mac_final;
 
   // Instantiate the neuron module
   fully_parallel #(N, QM, QN, WM, WN, OB) dut (
@@ -38,6 +46,8 @@ module fully_parallel_tb #(parameter N = 2, QM = 12, QN = 20, WM = 6, WN = 10, O
   // Test procedure
   initial begin
     // Initialize inputs
+    rst_n = 0;
+    #1; 
     rst_n = 1;
     bias = 0;
 

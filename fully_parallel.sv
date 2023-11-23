@@ -43,7 +43,11 @@ ReLU #(N, QM, QN) my_func (mac_final, out_not_registered);
 
 //Register the output
 always_ff @(posedge clk, negedge rst_n) begin
-    out <= out_not_registered;
+    
+    if (!rst_n) begin
+        out <= 0;
+    end
+    else out <= out_not_registered;
 end
 
 
