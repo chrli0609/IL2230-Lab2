@@ -10,7 +10,7 @@ module fully_serial #(parameter N = 2, parameter QM = 12, parameter QN = 20, par
   output logic done
 );
 
-logic signed [QM + QN + WM + WN + N - 1 ] feedback_reg, feedback_next, mac_out;
+logic signed [QM + QN + WM + WN + N - 1 : 0] feedback_reg, feedback_next, mac_out;
 logic [$clog2(N): 0] i_reg, i_next;
 logic done_next;
 logic [QM + QN - 1:0] out_next;
