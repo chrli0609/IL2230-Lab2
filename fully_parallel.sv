@@ -8,7 +8,7 @@ module fully_parallel #(parameter N = 2, parameter QM = 12, parameter QN = 20, p
     input logic signed [31:0] in [N-1:0],
     input logic signed [15:0] weights [N-1:0],
     input logic bias,
-    output logic [QM + QN:0] out
+    output logic [QM + QN - 1:0] out
 );
 
 logic [QM + QN + WM + WN + N - 1:0] mac_out [N:0];
