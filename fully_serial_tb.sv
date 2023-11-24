@@ -18,7 +18,7 @@ real mac_sum;
 real expected_out;
 logic [QM + QN - 1 :0] out_not_registered_tb;
 real mac_final_tb;
-logic [QM + QN + WM + WN + N - 1:0] feedback_reg_tb [N-1:0];
+logic [QM + QN + WM + WN + N - 1:0] feedback_reg_tb;
 
 
 
