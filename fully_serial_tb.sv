@@ -9,6 +9,7 @@ logic signed [QM + QN - 1:0] in_data [N-1:0];
 logic signed [WM + WN - 1:0] weights [N-1:0];
 logic bias;
 logic [QM + QN - 1:0] out_data;
+logic done;
 
 localparam IN_SF = 2.0**-QN;
 localparam W_SF = 2.0**-WN;
@@ -17,14 +18,13 @@ real mac_sum;
 real expected_out;
 logic [QM + QN - 1 :0] out_not_registered_tb;
 real mac_final_tb;
-logic [QM + QN + WM + WN + N - 1:0] mac_out_tb [N-1:0];
+logic [QM + QN + WM + WN + N - 1:0] feedback_reg_tb [N-1:0];
 
 
 
 
 assign out_not_registered_tb = dut.out_not_registered;
-assign mac_final_tb = dut.mac_final;
-assign mac_out_tb = dut.mac_out;
+assign feedback_reg_tb = dut.feedback_reg;
 
 // Instantiate the neuron module
 fully_serial #(N, QM, QN, WM, WN, OB) dut (
@@ -33,7 +33,8 @@ fully_serial #(N, QM, QN, WM, WN, OB) dut (
   .in(in_data),
   .weights(weights),
   .bias(bias),
-  .out(out_data)
+  .out(out_data),
+  .done(done)
 );
 
 // Clock generation
