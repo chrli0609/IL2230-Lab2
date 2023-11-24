@@ -42,7 +42,7 @@ always_comb begin
 
   case (curr_state)
     MultAcc: begin
-      if(i_reg == N) begin 
+      if(i_reg == N - 1) begin 
         next_state = Bias;
       end else begin 
         next_state = MultAcc;
@@ -76,6 +76,9 @@ end
 
 always_comb begin
   out_next = 0;
+  mac_in = 0;
+  mac_weight = 0;
+  feedback_next = feedback_reg;
     case (curr_state)
       MultAcc: begin
         mac_in = in[i_reg];
@@ -84,8 +87,8 @@ always_comb begin
         feedback_next = mac_out;
       end
       Bias: begin
-        mac_in = bias;
-        mac_weight = 1;
+        mac_in = {0, bias};
+        mac_weight = {0, 1};
       end
       ActFunc: begin
         feedback_next = 0;
