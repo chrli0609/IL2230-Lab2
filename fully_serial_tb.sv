@@ -1,6 +1,6 @@
 //`include "fully_parallel.sv"  // Include the design file
 
-module fully_parallel_tb #(parameter N = 2, QM = 6, QN = 10, WM = 6, WN = 10, OB = 8);
+module fully_serial_tb #(parameter N = 2, QM = 6, QN = 10, WM = 6, WN = 10, OB = 8);
 
 // Testbench signals
 logic clk;
@@ -27,7 +27,7 @@ assign mac_final_tb = dut.mac_final;
 assign mac_out_tb = dut.mac_out;
 
 // Instantiate the neuron module
-fully_parallel #(N, QM, QN, WM, WN, OB) dut (
+fully_serial #(N, QM, QN, WM, WN, OB) dut (
   .clk(clk),
   .rst_n(rst_n),
   .in(in_data),
@@ -44,7 +44,7 @@ end
 
 initial begin
   $dumpfile("dump.vcd");
-  $dumpvars(1, fully_parallel_tb);
+  $dumpvars(1, fully_serial_tb);
 end
 
 // Test procedure
