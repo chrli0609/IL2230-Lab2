@@ -5,7 +5,7 @@ module fully_serial #(parameter N = 2, parameter QM = 12, parameter QN = 20, par
   input logic clk, rst_n,
   input logic signed [QM + QN - 1:0] in [N-1:0],
   input logic signed [WM + WN - 1:0] weights [N-1:0],
-  input logic bias,
+  input logic [QM + QN - 1:0] bias,
   output logic [QM + QN - 1:0] out,
   output logic done
 );

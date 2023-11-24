@@ -7,7 +7,7 @@ logic clk;
 logic rst_n;
 logic signed [QM + QN - 1:0] in_data [N-1:0];
 logic signed [WM + WN - 1:0] weights [N-1:0];
-logic bias;
+logic [QM + QN - 1:0] bias;
 logic [QM + QN - 1:0] out_data;
 logic done;
 
