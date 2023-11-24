@@ -1,6 +1,6 @@
 //`include "fully_parallel.sv"  // Include the design file
 
-module fully_parallel_tb #(parameter N = 2, QM = 12, QN = 20, WM = 6, WN = 10, OB = 8);
+module fully_parallel_tb #(parameter N = 2, QM = 6, QN = 10, WM = 6, WN = 10, OB = 8);
 
   // Testbench signals
   logic clk;
