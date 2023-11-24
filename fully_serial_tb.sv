@@ -76,7 +76,7 @@ always @(posedge clk, negedge rst_n) begin
       in_data[i] = in_data[i] << (QN - (QM/2));
     end
 
-    @(posedge clk)
+    @(posedge done)
     mac_sum = 0.0;
     for (int i = 0; i<N; i++) begin
       mac_sum = mac_sum + ($itor(in_data[i]) * IN_SF * $itor(weights[i]) * W_SF);
@@ -90,10 +90,10 @@ always @(posedge clk, negedge rst_n) begin
 
     assert(expected_out == ($itor(out_data) * IN_SF)) $display("TEST PASSED");
     else $error("TEST FAILED\n",
-      "in[0]: %d\n", in_data[0],
-      "in[1]: %d\n", in_data[1],
-      "weights[0]: %d\n", weights[0],
-      "weights[1]: %d\n", weights[1],
+      "in[0]: %d\n", ($itor(in_data[0]) * IN_SF),
+      "in[1]: %d\n", ($itor(in_data[1]) * IN_SF),
+      "weights[0]: %d\n", ($itor(weights[0]) * W_SF),
+      "weights[1]: %d\n", ($itor(weights[1]) * W_SF),
       "mac_sum: %d\n", mac_sum,
       "expected_out: %f\n", expected_out,
       "out_data: %f\n", $itor(out_data) * IN_SF

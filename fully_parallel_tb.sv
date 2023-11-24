@@ -75,7 +75,7 @@ always @(negedge clk, negedge rst_n) begin
         in_data[i] = in_data[i] << (QN - (QM/2));
       end
 
-      @(negedge clk)
+      @(negedge done)
       mac_sum = 0.0;
       for (int i = 0; i<N; i++) begin
         mac_sum = mac_sum + ($itor(in_data[i]) * IN_SF * $itor(weights[i]) * W_SF);

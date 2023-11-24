@@ -25,7 +25,7 @@ logic signed [QM + QN - 1:0] mac_in;
 logic signed [WM + WN - 1:0] mac_weight;
 
 logic no_overflow, no_underflow;
-logic [QM + QN + N - 1:0] mac_final;
+logic [QM + QN - 1:0] mac_final;
 logic [QM + QN - 1:0] out_not_registered;
 
 MAC #(N, QM, QN, WM, WN, OB) mac (mac_in, mac_weight, feedback_reg, mac_out);
@@ -87,7 +87,7 @@ always_comb begin
         feedback_next = mac_out;
       end
       Bias: begin
-        mac_in = {0, bias};
+        mac_in = bias;
         mac_weight = {0, 1};
       end
       ActFunc: begin
