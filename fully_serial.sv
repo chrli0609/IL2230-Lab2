@@ -5,7 +5,7 @@ module fully_serial #(parameter N = 2, parameter QM = 12, parameter QN = 20, par
   input logic clk, rst_n,
   input logic signed [QM + QN - 1:0] in [N-1:0],
   input logic signed [WM + WN - 1:0] weights [N-1:0],
-  input logic [QM + QN - 1:0] bias,
+  input logic signed [QM + QN - 1:0] bias,
   output logic [QM + QN - 1:0] out,
   output logic done
 );
@@ -65,12 +65,15 @@ always_comb begin
 end
 
 always_comb begin
-    no_overflow = ~|feedback_reg[QM + QN + WM + WN + N - 1 : QM + QN + WM + WN];   
-    no_underflow = &feedback_reg[QM + QN + WM + WN + N - 1 : QM + QN + WM + WN];
+    no_overflow = ~|feedback_reg[QM + QN + WM + WN + N - 1 : QM + QN + WN - 1];   
+    no_underflow = &feedback_reg[QM + QN + WM + WN + N - 1 : QM + QN + WN - 1];
     if (no_overflow | no_underflow) begin
         mac_final = feedback_reg[QM + QN + WN - 1 : WN];
     end else begin
-        mac_final = $signed(feedback_reg[QM + QN + WM + WN + N - 1]);
+      if (feedback_reg[QM + QN + WM + WN + N - 1])
+        mac_final = -(2**(QM + QN - 1));
+      else
+        mac_final = 2**(QM + QN - 1) - 1;
     end
 end
 
@@ -88,7 +91,9 @@ always_comb begin
       end
       Bias: begin
         mac_in = bias;
-        mac_weight = {0, 1};
+        mac_weight = {0, 1} << WN;
+        
+        feedback_next = mac_out;
       end
       ActFunc: begin
         feedback_next = 0;

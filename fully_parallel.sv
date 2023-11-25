@@ -34,7 +34,7 @@ always_comb begin
     if (no_overflow | no_underflow) begin
         mac_final = mac_out[N][QM + QN + WN - 1 : WN];
     end else begin
-        mac_final = $signed(mac_out[N-1][QM + QN + WM + WN + N - 1]);
+        mac_final = {mac_out[N-1][QM + QN + WM + WN + N - 1],-1};
     end
 end
 
