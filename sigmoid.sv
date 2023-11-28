@@ -1,31 +1,35 @@
-module Sigmoid #(parameter N = 2, parameter QM = 12, parameter QN = 20) (
-    input logic [QM + QN + N - 1:0] in,
-    output logic [7:0] out
+module Sigmoid #(parameter N = 2, parameter QM = 6, parameter QN = 10) (
+    input logic signed [QM + QN + N - 1:0] in,
+    output logic signed [7:0] out
 );
   // Define the size of the lookup table
-  parameter LUT_BITS = 7;
-  parameter LUT_SIZE = 2**LUT_BITS;
-  parameter LUT_QN = 4;
+  parameter LUT_BITS = 8;
+  parameter LUT_HALF = 2**(LUT_BITS - 1);
+  parameter LUT_SIZE = 2**(LUT_BITS);
+  parameter LUT_QN = 5;
   parameter LUT_OFFSET = (2.0**-LUT_QN) * LUT_SIZE / 2;
+  localparam LUT_SF = 2.0**-LUT_QN;
+  localparam LUT_SF_2 = 2.0**LUT_QN;
 
   // Sigmoid lookup table for 8-bit fixed-point numbers 
-  logic signed [7:0] lut[LUT_SIZE];
+  logic signed [7:0] lut[LUT_HALF:-LUT_HALF];
 
   // Initialize the sigmoid lookup table
   initial begin
-    for (int i = 0; i < LUT_SIZE; i++) begin
-      // build lookup table for -4 to 4 with steps of 0.0625 when QN = 4
-      lut[i] = $signed($rtoi((2.0**LUT_QN) * (1.0 / (1.0 + $exp(-((i / (2.0**LUT_QN)) - LUT_OFFSET)))))); 
+    for (int i = -LUT_HALF; i <= LUT_HALF; i++) begin
+      // build lookup table for -4 to 4 with steps of 0.0625 when QN = 4 
+      // 1/(1+e^-x)
+      lut[i] = (1.0/(1.0 + 2.71828**(-$itor(i) * LUT_SF))) * LUT_SF_2;
     end
   end
   
   always_comb begin
     if (in[QM + QN + N - 1 : QN - LUT_QN] > LUT_OFFSET) begin
-      out = lut[LUT_SIZE];
-    end else if (in[QN + LUT_BITS - LUT_QN : QN - LUT_QN] > -LUT_OFFSET) begin
-      out = lut[in[QN + LUT_BITS - LUT_QN : QN - LUT_QN]];
+      out = lut[LUT_HALF];
+    end else if (in[QN + LUT_BITS + LUT_QN : QN - LUT_QN] > -LUT_OFFSET) begin
+      out = lut[$signed(in[QN + LUT_BITS + LUT_QN : QN - LUT_QN])];
     end else begin
-      out = lut[0];
+      out = lut[-LUT_HALF];
     end
   end
 

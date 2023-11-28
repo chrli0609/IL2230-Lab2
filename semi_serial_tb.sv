@@ -1,6 +1,6 @@
 //`include "semi_parallel.sv"  // Include the design file
 
-module semi_serial_tb #(parameter N = 2, QM = 16, QN = 16, WM = 6, WN = 10, OB = 8, K = 2);
+module semi_serial_tb #(parameter N = 11, QM = 16, QN = 16, WM = 6, WN = 10, OB = 8, K = 3);
 
 // Testbench signals
 logic clk;
