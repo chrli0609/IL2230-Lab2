@@ -1,5 +1,5 @@
 module Sigmoid #(parameter N = 2, parameter QM = 6, parameter QN = 10) (
-    input logic signed [QM + QN + N - 1:0] in,
+    input logic signed [QM + QN - 1:0] in,
     output logic signed [7:0] out
 );
   // Define the size of the lookup table
@@ -24,9 +24,9 @@ module Sigmoid #(parameter N = 2, parameter QM = 6, parameter QN = 10) (
   logic signed [LUT_BITS:0] target;
   assign target = in[QN + LUT_BITS : QN - LUT_QN];
   always_comb begin
-    if (target > LUT_HALF) begin
+    if ($signed(in[QM + QN - 1 : QN - LUT_QN]) > LUT_HALF) begin
       out = lut[LUT_HALF];
-    end else if (target > -LUT_HALF) begin
+    end else if ($signed(in[QM + QN - 1 : QN - LUT_QN]) > -LUT_HALF) begin
       out = lut[target];
     end else begin
       out = lut[-LUT_HALF];
