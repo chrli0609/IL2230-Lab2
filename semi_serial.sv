@@ -19,9 +19,12 @@ module semi_serial #(
     output logic done
 );
 
-  logic signed [QM + QN + WM + WN + N - 1 : 0] feedback_reg, feedback_next, mac_out[K-1:0];
+  logic signed [QM + QN + WM + WN + N - 1 : 0] partial_sum,
+      feedback_reg[K-1:0],
+      feedback_next[K-1:0],
+      mac_out[K-1:0];
 
-  logic [$clog2(N):0] i_reg, i_next;
+  logic [$clog2(N + K):0] i_reg, i_next;
   logic done_next;
   logic [QM + QN - 1:0] out_next;
 
@@ -40,8 +43,6 @@ module semi_serial #(
   logic [QM + QN - 1:0] out_not_registered;
 
 
-  logic signed [QM + QN + WM + WN + N : 0] partial_sum;
-
 
 
 
@@ -50,14 +51,14 @@ module semi_serial #(
       out_not_registered
   );
 
-  genvar j;
+  genvar k;
   generate
-    for (j = 0; j < K; j++) begin
+    for (k = 0; k < K; k++) begin
       MAC #(N, QM, QN, WM, WN, OB) mac (
-          mac_in[j],
-          mac_weight[j],
-          feedback_reg[j],
-          mac_out[j]
+          mac_in[k],
+          mac_weight[k],
+          feedback_reg[k],
+          mac_out[k]
       );
     end
   endgenerate
@@ -72,11 +73,14 @@ module semi_serial #(
 
     case (curr_state)
       MultAcc: begin
-        if (i_reg == ((N / 2) - 1)) begin
+        if (i_reg >= N - 1) begin
           next_state = Bias;
         end else begin
-          next_state = MultAcc;
-          i_next = i_reg + 1;
+          if(i_reg + K >= N - 1)
+            next_state = Bias;
+          else
+            next_state = MultAcc;
+          i_next = i_reg + K;
         end
       end
       Bias: begin
@@ -95,56 +99,55 @@ module semi_serial #(
   end
 
   always_comb begin
-    no_overflow  = ~|feedback_reg[QM+QN+WM+WN+N-1 : QM+QN+WN-1];
-    no_underflow = &feedback_reg[QM+QN+WM+WN+N-1 : QM+QN+WN-1];
+    no_overflow  = ~|partial_sum[QM+QN+WM+WN+N-1 : QM+QN+WN-1];
+    no_underflow = &partial_sum[QM+QN+WM+WN+N-1 : QM+QN+WN-1];
     if (no_overflow | no_underflow) begin
-      mac_final = feedback_reg[QM+QN+WN-1 : WN];
+      mac_final = partial_sum[QM+QN+WN-1 : WN];
     end else begin
-      if (feedback_reg[QM+QN+WM+WN+N-1]) mac_final = -(2 ** (QM + QN - 1));
+      if (partial_sum[QM+QN+WM+WN+N-1]) mac_final = -(2 ** (QM + QN - 1));
       else mac_final = 2 ** (QM + QN - 1) - 1;
     end
   end
 
   always_comb begin
     out_next = 0;
+    partial_sum = 0;
 
-
-    for (int j = 0; j < K; j++) begin
-      mac_in[j] = 0;
-      mac_weight[j] = 0;
-      feedback_next[j] = feedback_reg[j];
+    for (int k = 0; k < K; k++) begin
+      mac_in[k] = 0;
+      mac_weight[k] = 0;
+      feedback_next[k] = feedback_reg[k];
     end
 
     case (curr_state)
       MultAcc: begin
-        for (int j = 0; j < K; j++) begin
-          if (i_reg == 0) feedback_next[j] = 0;
-          else feedback_next[j] = mac_out[i_reg+((N/2)*j)];
-
-          mac_in[j] = in[i_reg+((N/2)*j)];
-          mac_weight[j] = weights[i_reg+((N/2)*j)];
-        end
-
-        if (i_reg == N / 2 - 1) begin
-          partial_sum = 0;
-          for (int j = 0; j < K; j++) begin
-            partial_sum = partial_sum + mac_out[j];
-          end
+        for (int k = 0; k < K; k++) begin
+          if (i_reg + k <=  N-1) begin
+            feedback_next[k] = mac_out[k];
+            mac_in[k] = in[i_reg + k];
+            mac_weight[k] = weights[i_reg + k];
+           end
         end
       end
 
       Bias: begin
         mac_in[0] = bias;
-        mac_weight[0] = {1'b0, 1'b1} << WN;
-
-        feedback_next[0] = partial_sum;
+        mac_weight[0] = {0, 1'b1} << WN;
+        feedback_next[0] = mac_out[0];
       end
       ActFunc: begin
-        feedback_next = 0;
+        for (int k = 0; k < K; k++) begin
+          feedback_next[k] = 0;
+        end
+        for (int k = 0; k < K; k++) begin
+          partial_sum = partial_sum + feedback_reg[k];
+        end
         out_next = out_not_registered;
       end
       default: begin
-        feedback_next = 0;
+        for (int k = 0; k < K; k++) begin
+          feedback_next[k] = 0;
+        end
       end
 
     endcase
@@ -155,13 +158,17 @@ module semi_serial #(
   always_ff @(posedge clk, negedge rst_n) begin
     if (!rst_n) begin
       curr_state <= MultAcc;
-      feedback_reg <= 0;
+      for (int k = 0; k < K; k++) begin
+        feedback_reg[k] <= 0;
+      end
       i_reg <= 0;
       done <= 0;
       out <= 0;
     end else begin
       curr_state <= next_state;
-      feedback_reg <= feedback_next;
+      for (int k = 0; k < K; k++) begin
+        feedback_reg[k] <= feedback_next[k];
+      end
       i_reg <= i_next;
       done <= done_next;
       out <= out_next;

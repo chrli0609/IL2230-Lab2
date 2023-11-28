@@ -106,7 +106,7 @@ module fully_serial #(
       end
       Bias: begin
         mac_in = bias;
-        mac_weight = {1'b0, 1'b1} << WN;
+        mac_weight = {0, 1'b1} << WN;
 
         feedback_next = mac_out;
       end
