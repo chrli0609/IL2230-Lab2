@@ -5,73 +5,32 @@ module Sigmoid #(parameter N = 2, parameter QM = 6, parameter QN = 10) (
   // Define the size of the lookup table
   parameter LUT_BITS = 8;
   parameter LUT_HALF = 2**(LUT_BITS - 1);
-  parameter LUT_SIZE = 2**(LUT_BITS);
   parameter LUT_QN = 5;
-  parameter LUT_OFFSET = (2.0**-LUT_QN) * LUT_SIZE / 2;
   localparam LUT_SF = 2.0**-LUT_QN;
-  localparam LUT_SF_2 = 2.0**LUT_QN;
 
   // Sigmoid lookup table for 8-bit fixed-point numbers 
-  logic signed [7:0] lut[LUT_HALF:-LUT_HALF];
+  logic [7:0] lut[LUT_HALF:-LUT_HALF];
 
   // Initialize the sigmoid lookup table
-  initial begin
-    for (int i = -LUT_HALF; i <= LUT_HALF; i++) begin
+  genvar i;
+  generate
+    for (i = -LUT_HALF; i <= LUT_HALF; i++) begin
       // build lookup table for -4 to 4 with steps of 0.0625 when QN = 4 
       // 1/(1+e^-x)
-      lut[i] = (1.0/(1.0 + 2.71828**(-$itor(i) * LUT_SF))) * LUT_SF_2;
+      assign lut[i] = (1.0/(1.0 + $exp(-$itor(i) * LUT_SF))) / LUT_SF;
     end
-  end
+  endgenerate
   
+  logic signed [LUT_BITS:0] target;
+  assign target = in[QN + LUT_BITS : QN - LUT_QN];
   always_comb begin
-    if (in[QM + QN + N - 1 : QN - LUT_QN] > LUT_OFFSET) begin
+    if (target > LUT_HALF) begin
       out = lut[LUT_HALF];
-    end else if (in[QN + LUT_BITS + LUT_QN : QN - LUT_QN] > -LUT_OFFSET) begin
-      out = lut[$signed(in[QN + LUT_BITS + LUT_QN : QN - LUT_QN])];
+    end else if (target > -LUT_HALF) begin
+      out = lut[target];
     end else begin
       out = lut[-LUT_HALF];
     end
   end
 
 endmodule
-
-/*
-module Sigmoid;
-
-  // Define the size of the lookup table
-  parameter LUT_SIZE = 128;
-
-  // Sigmoid lookup table for 8-bit fixed-point numbers 
-  logic signed [7:0] lut[LUT_SIZE];
-
-  logic [7:0] max_value;
-  logic [7:0] min_value;
-  logic signed [7:0] result;
-
-  // Initialize the sigmoid lookup table
-  initial begin
-    for (int i = 0; i < LUT_SIZE; i++) begin
-      lut[i] = $signed($rtoi(16.0 * (1.0 / (1.0 + $exp(-(i / 16.0)))))); 
-    end
-  end
-
-  // Sigmoid function using lookup table for 8-bit fixed-point numbers 
-  function logic signed [7:0] sigmoid_8bit(input logic [7:0] x);
-    max_value = 8'h7F;
-    min_value = -8'h80;
-
-    if (x >= 8'h0) begin
-      if (x < LUT_SIZE) begin
-        result = lut[x];
-      end else begin
-        result = max_value;
-      end
-    end else begin
-      result = min_value;
-    end
-
-    sigmoid_8bit = result;
-  endfunction
-
-endmodule
-*/
