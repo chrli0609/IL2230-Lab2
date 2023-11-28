@@ -40,6 +40,8 @@ module semi_serial #(
   logic [QM + QN - 1:0] out_not_registered;
 
 
+  logic signed [QM + QN + WM + WN + N : 0] partial_sum;
+
 
 
 
@@ -116,10 +118,18 @@ module semi_serial #(
     case (curr_state)
       MultAcc: begin
         for (int j = 0; j < K; j++) begin
-          if (i_reg == 0) feedback_reg[j] = 0;
+          if (i_reg == 0) feedback_next[j] = 0;
+          else feedback_next[j] = mac_out[i_reg+((N/2)*j)];
+
           mac_in[j] = in[i_reg+((N/2)*j)];
           mac_weight[j] = weights[i_reg+((N/2)*j)];
-          feedback_next[j] = mac_out[i_reg+((N/2)*j)];
+        end
+
+        if (i_reg == N / 2 - 1) begin
+          partial_sum = 0;
+          for (int j = 0; j < K; j++) begin
+            partial_sum = partial_sum + mac_out[j];
+          end
         end
       end
 
@@ -127,7 +137,7 @@ module semi_serial #(
         mac_in[0] = bias;
         mac_weight[0] = {1'b0, 1'b1} << WN;
 
-        feedback_next[0] = mac_out;
+        feedback_next[0] = partial_sum;
       end
       ActFunc: begin
         feedback_next = 0;
