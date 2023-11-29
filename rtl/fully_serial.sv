@@ -6,8 +6,7 @@ module fully_serial #(
     parameter QM = 12,
     parameter QN = 20,
     parameter WM = 6,
-    parameter WN = 10,
-    parameter OB = 8
+    parameter WN = 10
 ) (
     input logic clk,
     rst_n,
@@ -37,7 +36,7 @@ module fully_serial #(
   logic [QM + QN - 1:0] mac_final;
   logic [QM + QN - 1:0] out_not_registered;
 
-  MAC #(N, QM, QN, WM, WN, OB) mac (
+  MAC #(N, QM, QN, WM, WN) mac (
       mac_in,
       mac_weight,
       feedback_reg,

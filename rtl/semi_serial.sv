@@ -7,7 +7,6 @@ module semi_serial #(
     parameter QN = 20,
     parameter WM = 6,
     parameter WN = 10,
-    parameter OB = 8,
     parameter K  = 2
 ) (
     input logic clk,
@@ -54,7 +53,7 @@ module semi_serial #(
   genvar k;
   generate
     for (k = 0; k < K; k++) begin
-      MAC #(N, QM, QN, WM, WN, OB) mac (
+      MAC #(N, QM, QN, WM, WN) mac (
           mac_in[k],
           mac_weight[k],
           feedback_reg[k],
