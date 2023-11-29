@@ -14,7 +14,7 @@ logic signed [QM + QN - 1:0] mac_final;
 logic [QM + QN - 1:0] out_not_registered;
 logic signed [QM + QN + WM +WN + N - 1:0] bias_feedback;
 
-assign bias_feedback = $signed({bias, (QN-WN)'('h00)});
+assign bias_feedback = $signed({bias}) << WN;
 
 //Fully parallel loop
 genvar i;
@@ -28,12 +28,12 @@ generate
 endgenerate
 
 always_comb begin
-    no_overflow = ~|mac_out[N][QM + QN + WM + WN + N - 1 : QM + QN + WN - 1];   
-    no_underflow = &mac_out[N][QM + QN + WM + WN + N - 1 : QM + QN + WN - 1];
+    no_overflow = ~|mac_out[N-1][QM + QN + WM + WN + N - 1 : QM + QN + WN - 1];   
+    no_underflow = &mac_out[N-1][QM + QN + WM + WN + N - 1 : QM + QN + WN - 1];
     if (no_overflow | no_underflow) begin
-        mac_final = $signed(mac_out[N][QM + QN + WN - 1 : WN]);
+        mac_final = $signed(mac_out[N-1][QM + QN + WN - 1 : WN]);
     end else begin
-      if (mac_out[N][QM + QN + WM + WN + N - 1])
+      if (mac_out[N-1][QM + QN + WM + WN + N - 1])
         mac_final = -(2**(QM + QN - 1));
       else
         mac_final = 2**(QM + QN - 1) - 1;
