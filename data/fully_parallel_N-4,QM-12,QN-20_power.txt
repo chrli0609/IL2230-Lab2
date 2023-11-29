@@ -1,0 +1,79 @@
+Loading db file '/afs/it.kth.se/pkg/synopsys/extra_libraries/standard_cell/TSMC/tcbn90g_110a/Front_End/timing_power/tcbn90g_110a/tcbn90gtc.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fully_parallel_4_12_20
+Version: R-2020.09-SP5-3
+Date   : Wed Nov 29 16:09:24 2023
+****************************************
+
+
+Library(s) Used:
+
+    tcbn90gtc (File: /afs/it.kth.se/pkg/synopsys/extra_libraries/standard_cell/TSMC/tcbn90g_110a/Front_End/timing_power/tcbn90g_110a/tcbn90gtc.db)
+
+
+Operating Conditions: NCCOM   Library: tcbn90gtc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+fully_parallel_4_12_20 TSMC8K_Lowk_Aggresive
+                                         tcbn90gtc
+MAC_4_12_20_6_10_0     ZeroWireload      tcbn90gtc
+ReLU_4_12_20           ZeroWireload      tcbn90gtc
+MAC_4_12_20_6_10_1     ZeroWireload      tcbn90gtc
+MAC_4_12_20_6_10_2     ZeroWireload      tcbn90gtc
+MAC_4_12_20_6_10_3     ZeroWireload      tcbn90gtc
+MAC_4_12_20_6_10_0_DW01_add_0
+                       ZeroWireload      tcbn90gtc
+MAC_4_12_20_6_10_0_DW_mult_tc_0
+                       ZeroWireload      tcbn90gtc
+MAC_4_12_20_6_10_3_DW01_add_0_DW01_add_1
+                       ZeroWireload      tcbn90gtc
+MAC_4_12_20_6_10_3_DW_mult_tc_0_DW_mult_tc_1
+                       ZeroWireload      tcbn90gtc
+MAC_4_12_20_6_10_2_DW01_add_0_DW01_add_2
+                       ZeroWireload      tcbn90gtc
+MAC_4_12_20_6_10_2_DW_mult_tc_0_DW_mult_tc_2
+                       ZeroWireload      tcbn90gtc
+MAC_4_12_20_6_10_1_DW01_add_0_DW01_add_3
+                       ZeroWireload      tcbn90gtc
+MAC_4_12_20_6_10_1_DW_mult_tc_0_DW_mult_tc_3
+                       ZeroWireload      tcbn90gtc
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  = 124.6346 uW   (78%)
+  Net Switching Power  =  35.3847 uW   (22%)
+                         ---------
+Total Dynamic Power    = 160.0193 uW  (100%)
+
+Cell Leakage Power     =  95.1737 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       4.7152e-03        1.7274e-05          725.1895        5.4577e-03  (   2.14%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.1199        3.5368e-02        9.4448e+04            0.2497  (  97.86%)
+--------------------------------------------------------------------------------------------------
+Total              0.1246 mW     3.5385e-02 mW     9.5174e+04 nW         0.2552 mW
+1

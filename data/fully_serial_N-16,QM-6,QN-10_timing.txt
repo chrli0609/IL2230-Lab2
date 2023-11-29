@@ -1,0 +1,118 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fully_serial_16_6_10
+Version: R-2020.09-SP5-3
+Date   : Wed Nov 29 16:33:19 2023
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn90gtc
+Wire Load Model Mode: segmented
+
+  Startpoint: i_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: feedback_reg_reg[47]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fully_serial_16_6_10
+                     TSMC8K_Lowk_Aggresive tcbn90gtc
+  MAC_16_6_10_6_10_DW_mult_tc_0
+                     ZeroWireload          tcbn90gtc
+  MAC_16_6_10_6_10   ZeroWireload          tcbn90gtc
+  MAC_16_6_10_6_10_DW01_add_0
+                     ZeroWireload          tcbn90gtc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  i_reg_reg[0]/CP (DFCNQD1)                               0.00       0.00 r
+  i_reg_reg[0]/Q (DFCNQD1)                                0.18       0.18 r
+  U240/ZN (INVD1)                                         0.04       0.22 f
+  U320/ZN (NR2D0)                                         0.18       0.39 r
+  U177/Z (AN2D1)                                          0.30       0.69 r
+  U518/ZN (AOI22D0)                                       0.07       0.76 f
+  U520/ZN (ND4D0)                                         0.06       0.82 r
+  U525/ZN (IND4D0)                                        0.06       0.88 r
+  U241/Z (AO22D0)                                         0.11       1.00 r
+  mac/in[3] (MAC_16_6_10_6_10)                            0.00       1.00 r
+  mac/mult_11/a[3] (MAC_16_6_10_6_10_DW_mult_tc_0)        0.00       1.00 r
+  mac/mult_11/U493/ZN (XNR2D1)                            0.18       1.17 r
+  mac/mult_11/U486/ZN (ND2D1)                             0.11       1.28 f
+  mac/mult_11/U774/ZN (OAI32D0)                           0.16       1.44 r
+  mac/mult_11/U146/S (CMPE22D1)                           0.12       1.56 r
+  mac/mult_11/U145/S (CMPE32D1)                           0.08       1.64 f
+  mac/mult_11/U77/CO (CMPE32D1)                           0.10       1.74 f
+  mac/mult_11/U76/CO (CMPE32D1)                           0.06       1.79 f
+  mac/mult_11/U75/CO (CMPE32D1)                           0.06       1.85 f
+  mac/mult_11/U74/CO (CMPE32D1)                           0.06       1.91 f
+  mac/mult_11/U73/CO (CMPE32D1)                           0.06       1.97 f
+  mac/mult_11/U72/CO (CMPE32D1)                           0.06       2.02 f
+  mac/mult_11/U71/CO (CMPE32D1)                           0.06       2.08 f
+  mac/mult_11/U70/CO (CMPE32D1)                           0.06       2.14 f
+  mac/mult_11/U69/CO (CMPE32D1)                           0.06       2.20 f
+  mac/mult_11/U68/CO (CMPE32D1)                           0.06       2.25 f
+  mac/mult_11/U67/CO (CMPE32D1)                           0.06       2.31 f
+  mac/mult_11/U66/CO (CMPE32D1)                           0.06       2.37 f
+  mac/mult_11/U65/CO (CMPE32D1)                           0.06       2.43 f
+  mac/mult_11/U64/CO (CMPE32D1)                           0.06       2.48 f
+  mac/mult_11/U63/CO (CMPE32D1)                           0.06       2.54 f
+  mac/mult_11/U62/CO (CMPE32D1)                           0.06       2.60 f
+  mac/mult_11/U61/CO (CMPE32D1)                           0.06       2.65 f
+  mac/mult_11/U60/CO (CMPE32D1)                           0.06       2.71 f
+  mac/mult_11/U59/CO (CMPE32D1)                           0.06       2.77 f
+  mac/mult_11/U58/CO (CMPE32D1)                           0.06       2.83 f
+  mac/mult_11/U57/CO (CMPE32D1)                           0.06       2.88 f
+  mac/mult_11/U56/CO (CMPE32D1)                           0.06       2.94 f
+  mac/mult_11/U55/CO (CMPE32D1)                           0.06       3.00 f
+  mac/mult_11/U54/CO (CMPE32D1)                           0.06       3.06 f
+  mac/mult_11/U53/CO (CMPE32D1)                           0.06       3.11 f
+  mac/mult_11/U52/CO (CMPE32D1)                           0.05       3.17 f
+  mac/mult_11/U479/ZN (INVD1)                             0.21       3.38 r
+  mac/mult_11/product[31] (MAC_16_6_10_6_10_DW_mult_tc_0)
+                                                          0.00       3.38 r
+  mac/add_14/A[31] (MAC_16_6_10_6_10_DW01_add_0)          0.00       3.38 r
+  mac/add_14/U1_31/CO (CMPE32D1)                          0.13       3.51 r
+  mac/add_14/U1_32/CO (CMPE32D1)                          0.05       3.56 r
+  mac/add_14/U1_33/CO (CMPE32D1)                          0.05       3.61 r
+  mac/add_14/U1_34/CO (CMPE32D1)                          0.05       3.67 r
+  mac/add_14/U1_35/CO (CMPE32D1)                          0.05       3.72 r
+  mac/add_14/U1_36/CO (CMPE32D1)                          0.05       3.77 r
+  mac/add_14/U1_37/CO (CMPE32D1)                          0.05       3.82 r
+  mac/add_14/U1_38/CO (CMPE32D1)                          0.05       3.88 r
+  mac/add_14/U1_39/CO (CMPE32D1)                          0.05       3.93 r
+  mac/add_14/U1_40/CO (CMPE32D1)                          0.05       3.98 r
+  mac/add_14/U1_41/CO (CMPE32D1)                          0.05       4.03 r
+  mac/add_14/U1_42/CO (CMPE32D1)                          0.05       4.08 r
+  mac/add_14/U1_43/CO (CMPE32D1)                          0.05       4.14 r
+  mac/add_14/U1_44/CO (CMPE32D1)                          0.05       4.19 r
+  mac/add_14/U1_45/CO (CMPE32D1)                          0.05       4.24 r
+  mac/add_14/U1_46/CO (CMPE32D1)                          0.05       4.29 r
+  mac/add_14/U1_47/Z (XOR3D1)                             0.09       4.38 f
+  mac/add_14/SUM[47] (MAC_16_6_10_6_10_DW01_add_0)        0.00       4.38 f
+  mac/out[47] (MAC_16_6_10_6_10)                          0.00       4.38 f
+  U239/Z (AN2D0)                                          0.07       4.45 f
+  feedback_reg_reg[47]/D (DFCNQD1)                        0.00       4.45 f
+  data arrival time                                                  4.45
+
+  clock clk (rise edge)                                 100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.30      99.70
+  feedback_reg_reg[47]/CP (DFCNQD1)                       0.00      99.70 r
+  library setup time                                     -0.02      99.68
+  data required time                                                99.68
+  --------------------------------------------------------------------------
+  data required time                                                99.68
+  data arrival time                                                 -4.45
+  --------------------------------------------------------------------------
+  slack (MET)                                                       95.24
+
+
+1

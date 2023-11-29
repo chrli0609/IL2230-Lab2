@@ -1,0 +1,71 @@
+Loading db file '/afs/it.kth.se/pkg/synopsys/extra_libraries/standard_cell/TSMC/tcbn90g_110a/Front_End/timing_power/tcbn90g_110a/tcbn90gtc.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : semi_serial_32_3_5
+Version: R-2020.09-SP5-3
+Date   : Wed Nov 29 16:32:33 2023
+****************************************
+
+
+Library(s) Used:
+
+    tcbn90gtc (File: /afs/it.kth.se/pkg/synopsys/extra_libraries/standard_cell/TSMC/tcbn90g_110a/Front_End/timing_power/tcbn90g_110a/tcbn90gtc.db)
+
+
+Operating Conditions: NCCOM   Library: tcbn90gtc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+semi_serial_32_3_5     TSMC8K_Lowk_Aggresive
+                                         tcbn90gtc
+ReLU_32_3_5            ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_0      ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_1      ZeroWireload      tcbn90gtc
+semi_serial_32_3_5_DW01_add_0
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_0_DW01_add_0_DW01_add_2
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_0_DW_mult_tc_0
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_1_DW01_add_0_DW01_add_3
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_1_DW_mult_tc_0_DW_mult_tc_1
+                       ZeroWireload      tcbn90gtc
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  49.5589 uW   (78%)
+  Net Switching Power  =  13.6981 uW   (22%)
+                         ---------
+Total Dynamic Power    =  63.2569 uW  (100%)
+
+Cell Leakage Power     =  33.1893 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       1.9377e-02        1.4676e-03        2.9687e+03        2.3814e-02  (  24.69%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  3.0182e-02        1.2230e-02        3.0221e+04        7.2633e-02  (  75.31%)
+--------------------------------------------------------------------------------------------------
+Total          4.9559e-02 mW     1.3698e-02 mW     3.3189e+04 nW     9.6446e-02 mW
+1

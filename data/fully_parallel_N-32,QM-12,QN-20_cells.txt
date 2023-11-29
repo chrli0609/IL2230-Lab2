@@ -1,0 +1,188 @@
+ 
+****************************************
+Report : cell
+Design : fully_parallel_32_12_20
+Version: R-2020.09-SP5-3
+Date   : Wed Nov 29 16:17:57 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U3                        AO21D1          tcbn90gtc       4.838400  
+U4                        AO21D1          tcbn90gtc       4.838400  
+U5                        AO21D1          tcbn90gtc       4.838400  
+U6                        AO21D1          tcbn90gtc       4.838400  
+U7                        AO21D1          tcbn90gtc       4.838400  
+U8                        AO21D1          tcbn90gtc       4.838400  
+U9                        AO21D1          tcbn90gtc       4.838400  
+U10                       AO21D1          tcbn90gtc       4.838400  
+U11                       AO21D1          tcbn90gtc       4.838400  
+U12                       AO21D1          tcbn90gtc       4.838400  
+U13                       AO21D1          tcbn90gtc       4.838400  
+U14                       AO21D1          tcbn90gtc       4.838400  
+U15                       AO21D1          tcbn90gtc       4.838400  
+U16                       AO21D1          tcbn90gtc       4.838400  
+U17                       AO21D1          tcbn90gtc       4.838400  
+U18                       AO21D1          tcbn90gtc       4.838400  
+U19                       AO21D1          tcbn90gtc       4.838400  
+U20                       AO21D1          tcbn90gtc       4.838400  
+U21                       AO21D1          tcbn90gtc       4.838400  
+U22                       AO21D1          tcbn90gtc       4.838400  
+U23                       AO21D1          tcbn90gtc       4.838400  
+U24                       AO21D1          tcbn90gtc       4.838400  
+U25                       AO21D1          tcbn90gtc       4.838400  
+U26                       AO21D1          tcbn90gtc       4.838400  
+U27                       AO21D1          tcbn90gtc       4.838400  
+U28                       AO21D1          tcbn90gtc       4.838400  
+U29                       AO21D1          tcbn90gtc       4.838400  
+U30                       AO21D1          tcbn90gtc       4.838400  
+U31                       AO21D1          tcbn90gtc       4.838400  
+U32                       AO21D1          tcbn90gtc       4.838400  
+U33                       AO21D1          tcbn90gtc       4.838400  
+U59                       OR4D1           tcbn90gtc       5.644800  
+U68                       INVD0           tcbn90gtc       1.612800  
+U69                       BUFFD0          tcbn90gtc       2.419200  
+U70                       BUFFD0          tcbn90gtc       2.419200  
+U71                       BUFFD0          tcbn90gtc       2.419200  
+U72                       NR2D1           tcbn90gtc       2.419200  
+U73                       IIND4D1         tcbn90gtc       6.451200  
+U74                       NR3D0           tcbn90gtc       4.032000  
+U75                       INR4D0          tcbn90gtc       5.644800  
+U76                       NR2D1           tcbn90gtc       2.419200  
+U77                       INVD1           tcbn90gtc       1.612800  
+U78                       ND4D1           tcbn90gtc       4.838400  
+U79                       AN3D1           tcbn90gtc       4.838400  
+U80                       AN4D1           tcbn90gtc       5.644800  
+U81                       IIND4D1         tcbn90gtc       6.451200  
+U82                       NR3D0           tcbn90gtc       4.032000  
+U83                       INR4D0          tcbn90gtc       5.644800  
+U84                       NR2D1           tcbn90gtc       2.419200  
+U85                       IND4D1          tcbn90gtc       5.644800  
+U86                       IND4D1          tcbn90gtc       5.644800  
+U87                       AN3D1           tcbn90gtc       4.838400  
+U88                       ND2D1           tcbn90gtc       2.419200  
+U89                       IND4D1          tcbn90gtc       5.644800  
+U90                       ND2D1           tcbn90gtc       2.419200  
+U91                       INR4D0          tcbn90gtc       5.644800  
+U92                       NR2D1           tcbn90gtc       2.419200  
+U93                       IND4D1          tcbn90gtc       5.644800  
+U94                       ND2D1           tcbn90gtc       2.419200  
+U95                       INR4D0          tcbn90gtc       5.644800  
+U96                       NR2D1           tcbn90gtc       2.419200  
+U97                       OAI33D1         tcbn90gtc       6.451200  
+U98                       ND4D1           tcbn90gtc       4.838400  
+U99                       IND4D1          tcbn90gtc       5.644800  
+U100                      ND2D1           tcbn90gtc       2.419200  
+U101                      NR4D0           tcbn90gtc       4.838400  
+U102                      IND4D1          tcbn90gtc       5.644800  
+U103                      ND2D1           tcbn90gtc       2.419200  
+U104                      INR4D0          tcbn90gtc       5.644800  
+U105                      NR2D1           tcbn90gtc       2.419200  
+genblk1[0].genblk1.mac    MAC_32_12_20_6_10_0             9113.126449
+                                                                    h, p
+genblk1[1].genblk1.mac    MAC_32_12_20_6_10_31            9113.126449
+                                                                    h, p
+genblk1[2].genblk1.mac    MAC_32_12_20_6_10_30            9113.126449
+                                                                    h, p
+genblk1[3].genblk1.mac    MAC_32_12_20_6_10_29            9113.126449
+                                                                    h, p
+genblk1[4].genblk1.mac    MAC_32_12_20_6_10_28            9113.126449
+                                                                    h, p
+genblk1[5].genblk1.mac    MAC_32_12_20_6_10_27            9113.126449
+                                                                    h, p
+genblk1[6].genblk1.mac    MAC_32_12_20_6_10_26            9113.126449
+                                                                    h, p
+genblk1[7].genblk1.mac    MAC_32_12_20_6_10_25            9113.126449
+                                                                    h, p
+genblk1[8].genblk1.mac    MAC_32_12_20_6_10_24            9113.126449
+                                                                    h, p
+genblk1[9].genblk1.mac    MAC_32_12_20_6_10_23            9113.126449
+                                                                    h, p
+genblk1[10].genblk1.mac   MAC_32_12_20_6_10_22            9113.126449
+                                                                    h, p
+genblk1[11].genblk1.mac   MAC_32_12_20_6_10_21            9113.126449
+                                                                    h, p
+genblk1[12].genblk1.mac   MAC_32_12_20_6_10_20            9113.126449
+                                                                    h, p
+genblk1[13].genblk1.mac   MAC_32_12_20_6_10_19            9113.126449
+                                                                    h, p
+genblk1[14].genblk1.mac   MAC_32_12_20_6_10_18            9113.126449
+                                                                    h, p
+genblk1[15].genblk1.mac   MAC_32_12_20_6_10_17            9113.126449
+                                                                    h, p
+genblk1[16].genblk1.mac   MAC_32_12_20_6_10_16            9113.126449
+                                                                    h, p
+genblk1[17].genblk1.mac   MAC_32_12_20_6_10_15            9113.126449
+                                                                    h, p
+genblk1[18].genblk1.mac   MAC_32_12_20_6_10_14            9113.126449
+                                                                    h, p
+genblk1[19].genblk1.mac   MAC_32_12_20_6_10_13            9113.126449
+                                                                    h, p
+genblk1[20].genblk1.mac   MAC_32_12_20_6_10_12            9113.126449
+                                                                    h, p
+genblk1[21].genblk1.mac   MAC_32_12_20_6_10_11            9113.126449
+                                                                    h, p
+genblk1[22].genblk1.mac   MAC_32_12_20_6_10_10            9113.126449
+                                                                    h, p
+genblk1[23].genblk1.mac   MAC_32_12_20_6_10_9             9113.126449
+                                                                    h, p
+genblk1[24].genblk1.mac   MAC_32_12_20_6_10_8             9113.126449
+                                                                    h, p
+genblk1[25].genblk1.mac   MAC_32_12_20_6_10_7             9113.126449
+                                                                    h, p
+genblk1[26].genblk1.mac   MAC_32_12_20_6_10_6             9113.126449
+                                                                    h, p
+genblk1[27].genblk1.mac   MAC_32_12_20_6_10_5             9113.126449
+                                                                    h, p
+genblk1[28].genblk1.mac   MAC_32_12_20_6_10_4             9113.126449
+                                                                    h, p
+genblk1[29].genblk1.mac   MAC_32_12_20_6_10_3             9113.126449
+                                                                    h, p
+genblk1[30].genblk1.mac   MAC_32_12_20_6_10_2             9113.126449
+                                                                    h, p
+genblk1[31].genblk1.mac   MAC_32_12_20_6_10_1             8996.198450
+                                                                    h, p
+my_func                   ReLU_32_12_20                   101.606400
+                                                                    h, p
+out_reg[0]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[1]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[2]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[3]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[4]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[5]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[6]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[7]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[8]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[9]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[10]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[11]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[12]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[13]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[14]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[15]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[16]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[17]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[18]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[19]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[20]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[21]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[22]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[23]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[24]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[25]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[26]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[27]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[28]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[29]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[30]               DFCNQD1         tcbn90gtc       16.128000 n
+--------------------------------------------------------------------------------
+Total 134 cells                                           292416.769578
+1

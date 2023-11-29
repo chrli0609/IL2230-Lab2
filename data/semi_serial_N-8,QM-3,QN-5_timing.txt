@@ -1,0 +1,107 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : semi_serial_8_3_5
+Version: R-2020.09-SP5-3
+Date   : Wed Nov 29 16:29:36 2023
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn90gtc
+Wire Load Model Mode: segmented
+
+  Startpoint: i_reg_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: feedback_reg_reg[1][31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  semi_serial_8_3_5  TSMC8K_Lowk_Aggresive tcbn90gtc
+  MAC_8_3_5_6_10_1_DW_mult_tc_0_DW_mult_tc_1
+                     ZeroWireload          tcbn90gtc
+  MAC_8_3_5_6_10_1   ZeroWireload          tcbn90gtc
+  MAC_8_3_5_6_10_1_DW01_add_0_DW01_add_3
+                     ZeroWireload          tcbn90gtc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  i_reg_reg[4]/CP (DFCNQD1)                               0.00       0.00 r
+  i_reg_reg[4]/Q (DFCNQD1)                                0.14       0.14 f
+  U288/ZN (NR3D0)                                         0.09       0.23 r
+  U371/Z (AN2D0)                                          0.08       0.31 r
+  U366/Z (BUFFD0)                                         0.33       0.64 r
+  U287/ZN (INR4D0)                                        0.41       1.05 r
+  U364/ZN (INVD1)                                         0.02       1.07 f
+  U372/ZN (INVD1)                                         0.15       1.22 r
+  U336/ZN (AOI22D0)                                       0.05       1.27 f
+  U400/ZN (ND3D1)                                         0.04       1.31 r
+  genblk1[1].mac/in[3] (MAC_8_3_5_6_10_1)                 0.00       1.31 r
+  genblk1[1].mac/mult_11/a[3] (MAC_8_3_5_6_10_1_DW_mult_tc_0_DW_mult_tc_1)
+                                                          0.00       1.31 r
+  genblk1[1].mac/mult_11/U257/Z (BUFFD0)                  0.32       1.63 r
+  genblk1[1].mac/mult_11/U400/Z (CKXOR2D0)                0.15       1.78 f
+  genblk1[1].mac/mult_11/U242/ZN (INVD1)                  0.10       1.88 r
+  genblk1[1].mac/mult_11/U250/ZN (ND2D1)                  0.10       1.98 f
+  genblk1[1].mac/mult_11/U332/ZN (OAI22D0)                0.13       2.11 r
+  genblk1[1].mac/mult_11/U78/S (CMPE22D1)                 0.10       2.21 r
+  genblk1[1].mac/mult_11/U77/S (CMPE32D1)                 0.08       2.29 f
+  genblk1[1].mac/mult_11/U43/CO (CMPE32D1)                0.10       2.39 f
+  genblk1[1].mac/mult_11/U42/CO (CMPE32D1)                0.06       2.44 f
+  genblk1[1].mac/mult_11/U41/CO (CMPE32D1)                0.06       2.50 f
+  genblk1[1].mac/mult_11/U40/CO (CMPE32D1)                0.06       2.56 f
+  genblk1[1].mac/mult_11/U39/CO (CMPE32D1)                0.06       2.62 f
+  genblk1[1].mac/mult_11/U38/CO (CMPE32D1)                0.06       2.67 f
+  genblk1[1].mac/mult_11/U37/CO (CMPE32D1)                0.06       2.73 f
+  genblk1[1].mac/mult_11/U36/CO (CMPE32D1)                0.06       2.79 f
+  genblk1[1].mac/mult_11/U35/CO (CMPE32D1)                0.06       2.85 f
+  genblk1[1].mac/mult_11/U34/CO (CMPE32D1)                0.06       2.90 f
+  genblk1[1].mac/mult_11/U33/CO (CMPE32D1)                0.06       2.96 f
+  genblk1[1].mac/mult_11/U32/CO (CMPE32D1)                0.06       3.02 f
+  genblk1[1].mac/mult_11/U31/CO (CMPE32D1)                0.06       3.07 f
+  genblk1[1].mac/mult_11/U30/CO (CMPE32D1)                0.06       3.13 f
+  genblk1[1].mac/mult_11/U29/CO (CMPE32D1)                0.06       3.19 f
+  genblk1[1].mac/mult_11/U28/CO (CMPE32D1)                0.06       3.25 f
+  genblk1[1].mac/mult_11/U27/CO (CMPE32D1)                0.06       3.30 f
+  genblk1[1].mac/mult_11/U26/CO (CMPE32D1)                0.05       3.36 f
+  genblk1[1].mac/mult_11/U240/ZN (INVD1)                  0.12       3.47 r
+  genblk1[1].mac/mult_11/product[23] (MAC_8_3_5_6_10_1_DW_mult_tc_0_DW_mult_tc_1)
+                                                          0.00       3.47 r
+  genblk1[1].mac/add_14/A[23] (MAC_8_3_5_6_10_1_DW01_add_0_DW01_add_3)
+                                                          0.00       3.47 r
+  genblk1[1].mac/add_14/U1_23/CO (CMPE32D1)               0.12       3.60 r
+  genblk1[1].mac/add_14/U1_24/CO (CMPE32D1)               0.05       3.65 r
+  genblk1[1].mac/add_14/U1_25/CO (CMPE32D1)               0.05       3.70 r
+  genblk1[1].mac/add_14/U1_26/CO (CMPE32D1)               0.05       3.75 r
+  genblk1[1].mac/add_14/U1_27/CO (CMPE32D1)               0.05       3.81 r
+  genblk1[1].mac/add_14/U1_28/CO (CMPE32D1)               0.05       3.86 r
+  genblk1[1].mac/add_14/U1_29/CO (CMPE32D1)               0.05       3.91 r
+  genblk1[1].mac/add_14/U1_30/CO (CMPE32D1)               0.05       3.96 r
+  genblk1[1].mac/add_14/U1_31/Z (XOR3D1)                  0.10       4.05 f
+  genblk1[1].mac/add_14/SUM[31] (MAC_8_3_5_6_10_1_DW01_add_0_DW01_add_3)
+                                                          0.00       4.05 f
+  genblk1[1].mac/out[31] (MAC_8_3_5_6_10_1)               0.00       4.05 f
+  U401/Z (AO22D0)                                         0.10       4.15 f
+  feedback_reg_reg[1][31]/D (DFCNQD1)                     0.00       4.15 f
+  data arrival time                                                  4.15
+
+  clock clk (rise edge)                                 100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.30      99.70
+  feedback_reg_reg[1][31]/CP (DFCNQD1)                    0.00      99.70 r
+  library setup time                                     -0.02      99.68
+  data required time                                                99.68
+  --------------------------------------------------------------------------
+  data required time                                                99.68
+  data arrival time                                                 -4.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                       95.53
+
+
+1

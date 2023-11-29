@@ -1,0 +1,87 @@
+ 
+****************************************
+Report : cell
+Design : fully_parallel_16_3_5
+Version: R-2020.09-SP5-3
+Date   : Wed Nov 29 16:11:05 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U3                        AO21D1          tcbn90gtc       4.838400  
+U4                        AO21D1          tcbn90gtc       4.838400  
+U5                        AO21D1          tcbn90gtc       4.838400  
+U6                        AO21D1          tcbn90gtc       4.838400  
+U7                        AO21D1          tcbn90gtc       4.838400  
+U8                        AO21D1          tcbn90gtc       4.838400  
+U9                        AO21D1          tcbn90gtc       4.838400  
+U12                       OR4D1           tcbn90gtc       5.644800  
+U13                       OR3D1           tcbn90gtc       4.838400  
+U18                       OR3D1           tcbn90gtc       4.838400  
+U29                       NR2D1           tcbn90gtc       2.419200  
+U30                       IIND4D1         tcbn90gtc       6.451200  
+U31                       NR3D0           tcbn90gtc       4.032000  
+U32                       ND4D1           tcbn90gtc       4.838400  
+U33                       IINR4D0         tcbn90gtc       6.451200  
+U34                       AN3D1           tcbn90gtc       4.838400  
+U35                       ND3D1           tcbn90gtc       4.032000  
+U36                       INVD1           tcbn90gtc       1.612800  
+U37                       AN3D1           tcbn90gtc       4.838400  
+U38                       NR3D0           tcbn90gtc       4.032000  
+U39                       AN3D1           tcbn90gtc       4.838400  
+U40                       OAI33D1         tcbn90gtc       6.451200  
+U41                       ND4D1           tcbn90gtc       4.838400  
+U42                       ND4D1           tcbn90gtc       4.838400  
+U43                       IIND4D1         tcbn90gtc       6.451200  
+U44                       NR4D0           tcbn90gtc       4.838400  
+genblk1[0].genblk1.mac    MAC_16_3_5_6_10_0               2711.116800
+                                                                    h, p
+genblk1[1].genblk1.mac    MAC_16_3_5_6_10_15              2711.116800
+                                                                    h, p
+genblk1[2].genblk1.mac    MAC_16_3_5_6_10_14              2711.116800
+                                                                    h, p
+genblk1[3].genblk1.mac    MAC_16_3_5_6_10_13              2711.116800
+                                                                    h, p
+genblk1[4].genblk1.mac    MAC_16_3_5_6_10_12              2711.116800
+                                                                    h, p
+genblk1[5].genblk1.mac    MAC_16_3_5_6_10_11              2711.116800
+                                                                    h, p
+genblk1[6].genblk1.mac    MAC_16_3_5_6_10_10              2711.116800
+                                                                    h, p
+genblk1[7].genblk1.mac    MAC_16_3_5_6_10_9               2711.116800
+                                                                    h, p
+genblk1[8].genblk1.mac    MAC_16_3_5_6_10_8               2711.116800
+                                                                    h, p
+genblk1[9].genblk1.mac    MAC_16_3_5_6_10_7               2711.116800
+                                                                    h, p
+genblk1[10].genblk1.mac   MAC_16_3_5_6_10_6               2711.116800
+                                                                    h, p
+genblk1[11].genblk1.mac   MAC_16_3_5_6_10_5               2711.116800
+                                                                    h, p
+genblk1[12].genblk1.mac   MAC_16_3_5_6_10_4               2711.116800
+                                                                    h, p
+genblk1[13].genblk1.mac   MAC_16_3_5_6_10_3               2711.116800
+                                                                    h, p
+genblk1[14].genblk1.mac   MAC_16_3_5_6_10_2               2711.116800
+                                                                    h, p
+genblk1[15].genblk1.mac   MAC_16_3_5_6_10_1               2594.188800
+                                                                    h, p
+my_func                   ReLU_16_3_5                     24.192000 h, p
+out_reg[0]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[1]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[2]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[3]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[4]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[5]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[6]                DFCNQD1         tcbn90gtc       16.128000 n
+--------------------------------------------------------------------------------
+Total 50 cells                                            43523.020796
+1

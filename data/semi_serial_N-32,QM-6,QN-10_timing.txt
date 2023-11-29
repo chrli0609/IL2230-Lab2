@@ -1,0 +1,140 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : semi_serial_32_6_10
+Version: R-2020.09-SP5-3
+Date   : Wed Nov 29 16:33:06 2023
+****************************************
+
+Operating Conditions: NCCOM   Library: tcbn90gtc
+Wire Load Model Mode: segmented
+
+  Startpoint: i_reg_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: feedback_reg_reg[0][63]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  semi_serial_32_6_10
+                     TSMC8K_Lowk_Aggresive tcbn90gtc
+  MAC_32_6_10_6_10_0_DW_mult_tc_0
+                     ZeroWireload          tcbn90gtc
+  MAC_32_6_10_6_10_0 ZeroWireload          tcbn90gtc
+  MAC_32_6_10_6_10_0_DW01_add_0_DW01_add_2
+                     ZeroWireload          tcbn90gtc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  i_reg_reg[4]/CP (DFCNQD1)                               0.00       0.00 r
+  i_reg_reg[4]/Q (DFCNQD1)                                0.12       0.12 r
+  U1972/Z (BUFFD0)                                        0.20       0.31 r
+  U1970/Z (BUFFD0)                                        0.21       0.52 r
+  U2057/ZN (INVD1)                                        0.21       0.73 f
+  U1179/ZN (OAI221D0)                                     0.11       0.84 r
+  U2647/ZN (NR4D0)                                        0.05       0.89 f
+  U2650/Z (AO22D0)                                        0.10       0.98 f
+  U2226/Z (AO22D0)                                        0.12       1.10 f
+  genblk1[0].mac/in[5] (MAC_32_6_10_6_10_0)               0.00       1.10 f
+  genblk1[0].mac/mult_11/a[5] (MAC_32_6_10_6_10_0_DW_mult_tc_0)
+                                                          0.00       1.10 f
+  genblk1[0].mac/mult_11/U488/ZN (INVD1)                  0.14       1.24 r
+  genblk1[0].mac/mult_11/U795/ZN (XNR2D0)                 0.12       1.37 r
+  genblk1[0].mac/mult_11/U487/ZN (ND2D1)                  0.08       1.45 f
+  genblk1[0].mac/mult_11/U774/ZN (OAI32D0)                0.16       1.60 r
+  genblk1[0].mac/mult_11/U146/S (CMPE22D1)                0.12       1.73 r
+  genblk1[0].mac/mult_11/U145/S (CMPE32D1)                0.08       1.80 f
+  genblk1[0].mac/mult_11/U77/CO (CMPE32D1)                0.10       1.90 f
+  genblk1[0].mac/mult_11/U76/CO (CMPE32D1)                0.06       1.96 f
+  genblk1[0].mac/mult_11/U75/CO (CMPE32D1)                0.06       2.02 f
+  genblk1[0].mac/mult_11/U74/CO (CMPE32D1)                0.06       2.08 f
+  genblk1[0].mac/mult_11/U73/CO (CMPE32D1)                0.06       2.13 f
+  genblk1[0].mac/mult_11/U72/CO (CMPE32D1)                0.06       2.19 f
+  genblk1[0].mac/mult_11/U71/CO (CMPE32D1)                0.06       2.25 f
+  genblk1[0].mac/mult_11/U70/CO (CMPE32D1)                0.06       2.31 f
+  genblk1[0].mac/mult_11/U69/CO (CMPE32D1)                0.06       2.36 f
+  genblk1[0].mac/mult_11/U68/CO (CMPE32D1)                0.06       2.42 f
+  genblk1[0].mac/mult_11/U67/CO (CMPE32D1)                0.06       2.48 f
+  genblk1[0].mac/mult_11/U66/CO (CMPE32D1)                0.06       2.54 f
+  genblk1[0].mac/mult_11/U65/CO (CMPE32D1)                0.06       2.59 f
+  genblk1[0].mac/mult_11/U64/CO (CMPE32D1)                0.06       2.65 f
+  genblk1[0].mac/mult_11/U63/CO (CMPE32D1)                0.06       2.71 f
+  genblk1[0].mac/mult_11/U62/CO (CMPE32D1)                0.06       2.76 f
+  genblk1[0].mac/mult_11/U61/CO (CMPE32D1)                0.06       2.82 f
+  genblk1[0].mac/mult_11/U60/CO (CMPE32D1)                0.06       2.88 f
+  genblk1[0].mac/mult_11/U59/CO (CMPE32D1)                0.06       2.94 f
+  genblk1[0].mac/mult_11/U58/CO (CMPE32D1)                0.06       2.99 f
+  genblk1[0].mac/mult_11/U57/CO (CMPE32D1)                0.06       3.05 f
+  genblk1[0].mac/mult_11/U56/CO (CMPE32D1)                0.06       3.11 f
+  genblk1[0].mac/mult_11/U55/CO (CMPE32D1)                0.06       3.17 f
+  genblk1[0].mac/mult_11/U54/CO (CMPE32D1)                0.06       3.22 f
+  genblk1[0].mac/mult_11/U53/CO (CMPE32D1)                0.06       3.28 f
+  genblk1[0].mac/mult_11/U52/CO (CMPE32D1)                0.05       3.33 f
+  genblk1[0].mac/mult_11/U479/ZN (INVD1)                  0.19       3.52 r
+  genblk1[0].mac/mult_11/product[31] (MAC_32_6_10_6_10_0_DW_mult_tc_0)
+                                                          0.00       3.52 r
+  genblk1[0].mac/U1/ZN (INVD0)                            0.03       3.55 f
+  genblk1[0].mac/U2/ZN (INVD1)                            0.25       3.80 r
+  genblk1[0].mac/add_14/A[31] (MAC_32_6_10_6_10_0_DW01_add_0_DW01_add_2)
+                                                          0.00       3.80 r
+  genblk1[0].mac/add_14/U1_31/CO (CMPE32D1)               0.13       3.93 r
+  genblk1[0].mac/add_14/U1_32/CO (CMPE32D1)               0.05       3.98 r
+  genblk1[0].mac/add_14/U1_33/CO (CMPE32D1)               0.05       4.04 r
+  genblk1[0].mac/add_14/U1_34/CO (CMPE32D1)               0.05       4.09 r
+  genblk1[0].mac/add_14/U1_35/CO (CMPE32D1)               0.05       4.14 r
+  genblk1[0].mac/add_14/U1_36/CO (CMPE32D1)               0.05       4.19 r
+  genblk1[0].mac/add_14/U1_37/CO (CMPE32D1)               0.05       4.25 r
+  genblk1[0].mac/add_14/U1_38/CO (CMPE32D1)               0.05       4.30 r
+  genblk1[0].mac/add_14/U1_39/CO (CMPE32D1)               0.05       4.35 r
+  genblk1[0].mac/add_14/U1_40/CO (CMPE32D1)               0.05       4.40 r
+  genblk1[0].mac/add_14/U1_41/CO (CMPE32D1)               0.05       4.45 r
+  genblk1[0].mac/add_14/U1_42/CO (CMPE32D1)               0.05       4.51 r
+  genblk1[0].mac/add_14/U1_43/CO (CMPE32D1)               0.05       4.56 r
+  genblk1[0].mac/add_14/U1_44/CO (CMPE32D1)               0.05       4.61 r
+  genblk1[0].mac/add_14/U1_45/CO (CMPE32D1)               0.05       4.66 r
+  genblk1[0].mac/add_14/U1_46/CO (CMPE32D1)               0.05       4.72 r
+  genblk1[0].mac/add_14/U1_47/CO (CMPE32D1)               0.05       4.77 r
+  genblk1[0].mac/add_14/U1_48/CO (CMPE32D1)               0.05       4.82 r
+  genblk1[0].mac/add_14/U1_49/CO (CMPE32D1)               0.05       4.87 r
+  genblk1[0].mac/add_14/U1_50/CO (CMPE32D1)               0.05       4.92 r
+  genblk1[0].mac/add_14/U1_51/CO (CMPE32D1)               0.05       4.98 r
+  genblk1[0].mac/add_14/U1_52/CO (CMPE32D1)               0.05       5.03 r
+  genblk1[0].mac/add_14/U1_53/CO (CMPE32D1)               0.05       5.08 r
+  genblk1[0].mac/add_14/U1_54/CO (CMPE32D1)               0.05       5.13 r
+  genblk1[0].mac/add_14/U1_55/CO (CMPE32D1)               0.05       5.19 r
+  genblk1[0].mac/add_14/U1_56/CO (CMPE32D1)               0.05       5.24 r
+  genblk1[0].mac/add_14/U1_57/CO (CMPE32D1)               0.05       5.29 r
+  genblk1[0].mac/add_14/U1_58/CO (CMPE32D1)               0.05       5.34 r
+  genblk1[0].mac/add_14/U1_59/CO (CMPE32D1)               0.05       5.39 r
+  genblk1[0].mac/add_14/U1_60/CO (CMPE32D1)               0.05       5.45 r
+  genblk1[0].mac/add_14/U1_61/CO (CMPE32D1)               0.05       5.50 r
+  genblk1[0].mac/add_14/U1_62/CO (CMPE32D1)               0.05       5.54 r
+  genblk1[0].mac/add_14/U1_63/Z (XOR3D1)                  0.10       5.64 f
+  genblk1[0].mac/add_14/SUM[63] (MAC_32_6_10_6_10_0_DW01_add_0_DW01_add_2)
+                                                          0.00       5.64 f
+  genblk1[0].mac/out[63] (MAC_32_6_10_6_10_0)             0.00       5.64 f
+  U2227/Z (AO22D0)                                        0.10       5.74 f
+  feedback_reg_reg[0][63]/D (DFCNQD1)                     0.00       5.74 f
+  data arrival time                                                  5.74
+
+  clock clk (rise edge)                                 100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.30      99.70
+  feedback_reg_reg[0][63]/CP (DFCNQD1)                    0.00      99.70 r
+  library setup time                                     -0.02      99.68
+  data required time                                                99.68
+  --------------------------------------------------------------------------
+  data required time                                                99.68
+  data arrival time                                                 -5.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                       93.94
+
+
+1

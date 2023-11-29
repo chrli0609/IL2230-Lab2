@@ -1,0 +1,99 @@
+Loading db file '/afs/it.kth.se/pkg/synopsys/extra_libraries/standard_cell/TSMC/tcbn90g_110a/Front_End/timing_power/tcbn90g_110a/tcbn90gtc.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fully_parallel_8_3_5
+Version: R-2020.09-SP5-3
+Date   : Wed Nov 29 16:09:40 2023
+****************************************
+
+
+Library(s) Used:
+
+    tcbn90gtc (File: /afs/it.kth.se/pkg/synopsys/extra_libraries/standard_cell/TSMC/tcbn90g_110a/Front_End/timing_power/tcbn90g_110a/tcbn90gtc.db)
+
+
+Operating Conditions: NCCOM   Library: tcbn90gtc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+fully_parallel_8_3_5   TSMC8K_Lowk_Aggresive
+                                         tcbn90gtc
+MAC_8_3_5_6_10_0       ZeroWireload      tcbn90gtc
+ReLU_8_3_5             ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_1       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_2       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_3       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_4       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_5       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_6       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_7       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_0_DW01_add_0
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_0_DW_mult_tc_0
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_7_DW01_add_0_DW01_add_1
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_7_DW_mult_tc_0_DW_mult_tc_1
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_6_DW01_add_0_DW01_add_2
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_6_DW_mult_tc_0_DW_mult_tc_2
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_5_DW01_add_0_DW01_add_3
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_5_DW_mult_tc_0_DW_mult_tc_3
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_4_DW01_add_0_DW01_add_4
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_4_DW_mult_tc_0_DW_mult_tc_4
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_3_DW01_add_0_DW01_add_5
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_3_DW_mult_tc_0_DW_mult_tc_5
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_2_DW01_add_0_DW01_add_6
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_2_DW_mult_tc_0_DW_mult_tc_6
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_1_DW01_add_0_DW01_add_7
+                       ZeroWireload      tcbn90gtc
+MAC_8_3_5_6_10_1_DW_mult_tc_0_DW_mult_tc_7
+                       ZeroWireload      tcbn90gtc
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  71.7924 uW   (78%)
+  Net Switching Power  =  20.7393 uW   (22%)
+                         ---------
+Total Dynamic Power    =  92.5317 uW  (100%)
+
+Cell Leakage Power     =  60.7263 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       1.0832e-03        4.0870e-06          163.8384        1.2511e-03  (   0.82%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  7.0709e-02        2.0735e-02        6.0562e+04            0.1520  (  99.18%)
+--------------------------------------------------------------------------------------------------
+Total          7.1792e-02 mW     2.0739e-02 mW     6.0726e+04 nW         0.1533 mW
+1

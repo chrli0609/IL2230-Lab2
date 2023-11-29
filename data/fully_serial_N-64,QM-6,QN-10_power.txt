@@ -1,0 +1,66 @@
+Loading db file '/afs/it.kth.se/pkg/synopsys/extra_libraries/standard_cell/TSMC/tcbn90g_110a/Front_End/timing_power/tcbn90g_110a/tcbn90gtc.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fully_serial_64_6_10
+Version: R-2020.09-SP5-3
+Date   : Wed Nov 29 16:35:27 2023
+****************************************
+
+
+Library(s) Used:
+
+    tcbn90gtc (File: /afs/it.kth.se/pkg/synopsys/extra_libraries/standard_cell/TSMC/tcbn90g_110a/Front_End/timing_power/tcbn90g_110a/tcbn90gtc.db)
+
+
+Operating Conditions: NCCOM   Library: tcbn90gtc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+fully_serial_64_6_10   TSMC8K_Lowk_Aggresive
+                                         tcbn90gtc
+MAC_64_6_10_6_10       ZeroWireload      tcbn90gtc
+ReLU_64_6_10           ZeroWireload      tcbn90gtc
+fully_serial_64_6_10_DW01_inc_0
+                       ZeroWireload      tcbn90gtc
+MAC_64_6_10_6_10_DW01_add_0
+                       ZeroWireload      tcbn90gtc
+MAC_64_6_10_6_10_DW_mult_tc_0
+                       ZeroWireload      tcbn90gtc
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  47.0747 uW   (77%)
+  Net Switching Power  =  13.8387 uW   (23%)
+                         ---------
+Total Dynamic Power    =  60.9134 uW  (100%)
+
+Cell Leakage Power     =  29.7540 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       1.7726e-02        8.7964e-04        2.7941e+03        2.1400e-02  (  23.60%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.9348e-02        1.2959e-02        2.6960e+04        6.9267e-02  (  76.40%)
+--------------------------------------------------------------------------------------------------
+Total          4.7075e-02 mW     1.3839e-02 mW     2.9754e+04 nW     9.0667e-02 mW
+1

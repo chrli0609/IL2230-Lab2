@@ -1,0 +1,617 @@
+ 
+****************************************
+Report : cell
+Design : fully_serial_16_6_10
+Version: R-2020.09-SP5-3
+Date   : Wed Nov 29 16:33:19 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+   mo - map_only
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U42                       AO21D1          tcbn90gtc       4.838400  
+U60                       AO21D1          tcbn90gtc       4.838400  
+U61                       AO21D1          tcbn90gtc       4.838400  
+U62                       AO21D1          tcbn90gtc       4.838400  
+U63                       AO21D1          tcbn90gtc       4.838400  
+U64                       AO21D1          tcbn90gtc       4.838400  
+U65                       AO21D1          tcbn90gtc       4.838400  
+U66                       AO21D1          tcbn90gtc       4.838400  
+U67                       AO21D1          tcbn90gtc       4.838400  
+U68                       AO21D1          tcbn90gtc       4.838400  
+U69                       AO21D1          tcbn90gtc       4.838400  
+U70                       AO21D1          tcbn90gtc       4.838400  
+U71                       AO21D1          tcbn90gtc       4.838400  
+U72                       AO21D1          tcbn90gtc       4.838400  
+U73                       AO21D1          tcbn90gtc       4.838400  
+U74                       AO21D1          tcbn90gtc       4.838400  
+U77                       OR4D1           tcbn90gtc       5.644800  
+U78                       OR3D1           tcbn90gtc       4.838400  
+U83                       OR3D1           tcbn90gtc       4.838400  
+U141                      OR2D1           tcbn90gtc       4.032000  
+U149                      NR2D2           tcbn90gtc       4.838400  
+U150                      ND2D1           tcbn90gtc       2.419200  
+U151                      ND2D1           tcbn90gtc       2.419200  
+U152                      ND2D1           tcbn90gtc       2.419200  
+U153                      ND2D1           tcbn90gtc       2.419200  
+U154                      ND2D1           tcbn90gtc       2.419200  
+U155                      ND2D1           tcbn90gtc       2.419200  
+U156                      ND2D1           tcbn90gtc       2.419200  
+U157                      ND2D1           tcbn90gtc       2.419200  
+U158                      ND2D1           tcbn90gtc       2.419200  
+U159                      ND2D1           tcbn90gtc       2.419200  
+U160                      ND2D1           tcbn90gtc       2.419200  
+U161                      ND2D1           tcbn90gtc       2.419200  
+U162                      ND2D1           tcbn90gtc       2.419200  
+U163                      ND2D1           tcbn90gtc       2.419200  
+U164                      ND2D1           tcbn90gtc       2.419200  
+U165                      AN2D0           tcbn90gtc       3.225600  
+U166                      BUFFD0          tcbn90gtc       2.419200  
+U167                      BUFFD0          tcbn90gtc       2.419200  
+U168                      BUFFD0          tcbn90gtc       2.419200  
+U169                      BUFFD0          tcbn90gtc       2.419200  
+U170                      BUFFD0          tcbn90gtc       2.419200  
+U171                      INVD1           tcbn90gtc       1.612800  
+U172                      AN2D0           tcbn90gtc       3.225600  
+U173                      INVD1           tcbn90gtc       1.612800  
+U174                      BUFFD0          tcbn90gtc       2.419200  
+U175                      BUFFD0          tcbn90gtc       2.419200  
+U176                      INVD1           tcbn90gtc       1.612800  
+U177                      AN2D1           tcbn90gtc       4.032000  
+U178                      INVD1           tcbn90gtc       1.612800  
+U179                      INVD1           tcbn90gtc       1.612800  
+U180                      INVD1           tcbn90gtc       1.612800  
+U181                      INVD1           tcbn90gtc       1.612800  
+U182                      INVD1           tcbn90gtc       1.612800  
+U183                      INVD1           tcbn90gtc       1.612800  
+U184                      AN2D0           tcbn90gtc       3.225600  
+U185                      INVD1           tcbn90gtc       1.612800  
+U186                      INVD1           tcbn90gtc       1.612800  
+U187                      INVD1           tcbn90gtc       1.612800  
+U188                      INVD1           tcbn90gtc       1.612800  
+U189                      AN2D0           tcbn90gtc       3.225600  
+U190                      INVD1           tcbn90gtc       1.612800  
+U191                      INVD1           tcbn90gtc       1.612800  
+U192                      INVD1           tcbn90gtc       1.612800  
+U193                      AN2D0           tcbn90gtc       3.225600  
+U194                      AN2D0           tcbn90gtc       3.225600  
+U195                      AN2D0           tcbn90gtc       3.225600  
+U196                      AN2D0           tcbn90gtc       3.225600  
+U197                      AN2D0           tcbn90gtc       3.225600  
+U198                      AN2D0           tcbn90gtc       3.225600  
+U199                      AN2D0           tcbn90gtc       3.225600  
+U200                      AN2D0           tcbn90gtc       3.225600  
+U201                      AN2D0           tcbn90gtc       3.225600  
+U202                      AN2D0           tcbn90gtc       3.225600  
+U203                      AN2D0           tcbn90gtc       3.225600  
+U204                      AN2D0           tcbn90gtc       3.225600  
+U205                      AN2D0           tcbn90gtc       3.225600  
+U206                      AN2D0           tcbn90gtc       3.225600  
+U207                      AN2D0           tcbn90gtc       3.225600  
+U208                      AN2D0           tcbn90gtc       3.225600  
+U209                      AN2D0           tcbn90gtc       3.225600  
+U210                      AN2D0           tcbn90gtc       3.225600  
+U211                      AN2D0           tcbn90gtc       3.225600  
+U212                      AN2D0           tcbn90gtc       3.225600  
+U213                      AN2D0           tcbn90gtc       3.225600  
+U214                      AN2D0           tcbn90gtc       3.225600  
+U215                      AN2D0           tcbn90gtc       3.225600  
+U216                      AN2D0           tcbn90gtc       3.225600  
+U217                      AN2D0           tcbn90gtc       3.225600  
+U218                      AN2D0           tcbn90gtc       3.225600  
+U219                      AN2D0           tcbn90gtc       3.225600  
+U220                      AN2D0           tcbn90gtc       3.225600  
+U221                      AN2D0           tcbn90gtc       3.225600  
+U222                      AN2D0           tcbn90gtc       3.225600  
+U223                      AN2D0           tcbn90gtc       3.225600  
+U224                      AN2D0           tcbn90gtc       3.225600  
+U225                      AN2D0           tcbn90gtc       3.225600  
+U226                      AN2D0           tcbn90gtc       3.225600  
+U227                      AN2D0           tcbn90gtc       3.225600  
+U228                      AN2D0           tcbn90gtc       3.225600  
+U229                      AN2D0           tcbn90gtc       3.225600  
+U230                      AN2D0           tcbn90gtc       3.225600  
+U231                      AN2D0           tcbn90gtc       3.225600  
+U232                      AN2D0           tcbn90gtc       3.225600  
+U233                      AN2D0           tcbn90gtc       3.225600  
+U234                      AN2D0           tcbn90gtc       3.225600  
+U235                      AN2D0           tcbn90gtc       3.225600  
+U236                      AN2D0           tcbn90gtc       3.225600  
+U237                      NR2D1           tcbn90gtc       2.419200  
+U238                      AO22D0          tcbn90gtc       5.644800  
+U239                      AN2D0           tcbn90gtc       3.225600  
+U240                      INVD1           tcbn90gtc       1.612800  
+U241                      AO22D0          tcbn90gtc       5.644800  
+U242                      INVD1           tcbn90gtc       1.612800  
+U243                      INVD1           tcbn90gtc       1.612800  
+U244                      AO22D0          tcbn90gtc       5.644800  
+U245                      AO22D0          tcbn90gtc       5.644800  
+U246                      AO22D0          tcbn90gtc       5.644800  
+U247                      AO22D0          tcbn90gtc       5.644800  
+U248                      INVD1           tcbn90gtc       1.612800  
+U249                      AO22D0          tcbn90gtc       5.644800  
+U250                      AO22D0          tcbn90gtc       5.644800  
+U251                      AO22D0          tcbn90gtc       5.644800  
+U252                      AN2D0           tcbn90gtc       3.225600  
+U253                      AN2D0           tcbn90gtc       3.225600  
+U254                      AO22D0          tcbn90gtc       5.644800  
+U255                      AN2D0           tcbn90gtc       3.225600  
+U256                      AN2D0           tcbn90gtc       3.225600  
+U257                      AN2D0           tcbn90gtc       3.225600  
+U258                      AO22D0          tcbn90gtc       5.644800  
+U259                      AN2D0           tcbn90gtc       3.225600  
+U260                      AO22D0          tcbn90gtc       5.644800  
+U261                      AN2D0           tcbn90gtc       3.225600  
+U262                      AN2D0           tcbn90gtc       3.225600  
+U263                      AO22D0          tcbn90gtc       5.644800  
+U264                      AO22D0          tcbn90gtc       5.644800  
+U265                      AO22D0          tcbn90gtc       5.644800  
+U266                      AN2D0           tcbn90gtc       3.225600  
+U267                      AO22D0          tcbn90gtc       5.644800  
+U268                      AN2D0           tcbn90gtc       3.225600  
+U269                      AN2D0           tcbn90gtc       3.225600  
+U270                      AN2D0           tcbn90gtc       3.225600  
+U271                      NR2D1           tcbn90gtc       2.419200  
+U272                      INVD1           tcbn90gtc       1.612800  
+U273                      AN2D0           tcbn90gtc       3.225600  
+U274                      AN2D0           tcbn90gtc       3.225600  
+U275                      AN2D0           tcbn90gtc       3.225600  
+U276                      NR2D1           tcbn90gtc       2.419200  
+U277                      NR2D1           tcbn90gtc       2.419200  
+U278                      AN2D0           tcbn90gtc       3.225600  
+U279                      ND4D1           tcbn90gtc       4.838400  
+U280                      ND4D1           tcbn90gtc       4.838400  
+U281                      ND4D1           tcbn90gtc       4.838400  
+U282                      NR2D1           tcbn90gtc       2.419200  
+U283                      IIND4D1         tcbn90gtc       6.451200  
+U284                      NR3D0           tcbn90gtc       4.032000  
+U285                      NR4D0           tcbn90gtc       4.838400  
+U286                      AN2D0           tcbn90gtc       3.225600  
+U287                      AN2D0           tcbn90gtc       3.225600  
+U288                      AN2D0           tcbn90gtc       3.225600  
+U289                      AN2D0           tcbn90gtc       3.225600  
+U290                      AN2D0           tcbn90gtc       3.225600  
+U291                      AN2D0           tcbn90gtc       3.225600  
+U292                      AN2D0           tcbn90gtc       3.225600  
+U293                      AN2D0           tcbn90gtc       3.225600  
+U294                      AN2D0           tcbn90gtc       3.225600  
+U295                      AN2D0           tcbn90gtc       3.225600  
+U296                      AN2D0           tcbn90gtc       3.225600  
+U297                      AN2D0           tcbn90gtc       3.225600  
+U298                      AN2D0           tcbn90gtc       3.225600  
+U299                      AN2D0           tcbn90gtc       3.225600  
+U300                      AN2D0           tcbn90gtc       3.225600  
+U301                      IIND4D1         tcbn90gtc       6.451200  
+U302                      NR3D0           tcbn90gtc       4.032000  
+U303                      AN4D1           tcbn90gtc       5.644800  
+U304                      INVD1           tcbn90gtc       1.612800  
+U305                      IND3D1          tcbn90gtc       4.838400  
+U306                      AO22D0          tcbn90gtc       5.644800  
+U307                      AO22D0          tcbn90gtc       5.644800  
+U308                      AO22D0          tcbn90gtc       5.644800  
+U309                      AO22D0          tcbn90gtc       5.644800  
+U310                      AO22D0          tcbn90gtc       5.644800  
+U311                      INVD1           tcbn90gtc       1.612800  
+U312                      IINR4D0         tcbn90gtc       6.451200  
+U313                      ND3D1           tcbn90gtc       4.032000  
+U314                      AN3D1           tcbn90gtc       4.838400  
+U315                      AN3D1           tcbn90gtc       4.838400  
+U316                      AN3D1           tcbn90gtc       4.838400  
+U318                      NR2D0           tcbn90gtc       2.419200  
+U319                      NR2D0           tcbn90gtc       2.419200  
+U320                      NR2D0           tcbn90gtc       2.419200  
+U321                      AOI22D0         tcbn90gtc       4.032000  
+U322                      NR2D0           tcbn90gtc       2.419200  
+U323                      NR2D0           tcbn90gtc       2.419200  
+U324                      AOI22D0         tcbn90gtc       4.032000  
+U325                      NR2D0           tcbn90gtc       2.419200  
+U326                      AOI22D0         tcbn90gtc       4.032000  
+U327                      AOI22D0         tcbn90gtc       4.032000  
+U328                      ND4D0           tcbn90gtc       4.838400  
+U329                      NR2D0           tcbn90gtc       2.419200  
+U330                      AOI22D0         tcbn90gtc       4.032000  
+U331                      NR2D0           tcbn90gtc       2.419200  
+U332                      AO22D0          tcbn90gtc       5.644800  
+U333                      AOI221D0        tcbn90gtc       5.644800  
+U334                      AOI22D0         tcbn90gtc       4.032000  
+U335                      IND4D0          tcbn90gtc       5.644800  
+U336                      AOI22D0         tcbn90gtc       4.032000  
+U337                      AOI22D0         tcbn90gtc       4.032000  
+U338                      AOI22D0         tcbn90gtc       4.032000  
+U339                      AOI22D0         tcbn90gtc       4.032000  
+U340                      ND4D0           tcbn90gtc       4.838400  
+U341                      AOI22D0         tcbn90gtc       4.032000  
+U342                      AO22D0          tcbn90gtc       5.644800  
+U343                      AOI221D0        tcbn90gtc       5.644800  
+U344                      AOI22D0         tcbn90gtc       4.032000  
+U345                      IND4D0          tcbn90gtc       5.644800  
+U346                      AOI22D0         tcbn90gtc       4.032000  
+U347                      AOI22D0         tcbn90gtc       4.032000  
+U348                      AOI22D0         tcbn90gtc       4.032000  
+U349                      AOI22D0         tcbn90gtc       4.032000  
+U350                      ND4D0           tcbn90gtc       4.838400  
+U351                      AOI22D0         tcbn90gtc       4.032000  
+U352                      AO22D0          tcbn90gtc       5.644800  
+U353                      AOI221D0        tcbn90gtc       5.644800  
+U354                      AOI22D0         tcbn90gtc       4.032000  
+U355                      IND4D0          tcbn90gtc       5.644800  
+U356                      AOI22D0         tcbn90gtc       4.032000  
+U357                      AOI22D0         tcbn90gtc       4.032000  
+U358                      AOI22D0         tcbn90gtc       4.032000  
+U359                      AOI22D0         tcbn90gtc       4.032000  
+U360                      ND4D0           tcbn90gtc       4.838400  
+U361                      AOI22D0         tcbn90gtc       4.032000  
+U362                      AO22D0          tcbn90gtc       5.644800  
+U363                      AOI221D0        tcbn90gtc       5.644800  
+U364                      AOI22D0         tcbn90gtc       4.032000  
+U365                      IND4D0          tcbn90gtc       5.644800  
+U366                      AOI22D0         tcbn90gtc       4.032000  
+U367                      AOI22D0         tcbn90gtc       4.032000  
+U368                      AOI22D0         tcbn90gtc       4.032000  
+U369                      AOI22D0         tcbn90gtc       4.032000  
+U370                      ND4D0           tcbn90gtc       4.838400  
+U371                      AOI22D0         tcbn90gtc       4.032000  
+U372                      AO22D0          tcbn90gtc       5.644800  
+U373                      AOI221D0        tcbn90gtc       5.644800  
+U374                      AOI22D0         tcbn90gtc       4.032000  
+U375                      IND4D0          tcbn90gtc       5.644800  
+U376                      AOI22D0         tcbn90gtc       4.032000  
+U377                      AOI22D0         tcbn90gtc       4.032000  
+U378                      AOI22D0         tcbn90gtc       4.032000  
+U379                      AOI22D0         tcbn90gtc       4.032000  
+U380                      ND4D0           tcbn90gtc       4.838400  
+U381                      AOI22D0         tcbn90gtc       4.032000  
+U382                      AO22D0          tcbn90gtc       5.644800  
+U383                      AOI221D0        tcbn90gtc       5.644800  
+U384                      AOI22D0         tcbn90gtc       4.032000  
+U385                      IND4D0          tcbn90gtc       5.644800  
+U386                      AOI22D0         tcbn90gtc       4.032000  
+U387                      AOI22D0         tcbn90gtc       4.032000  
+U388                      AOI22D0         tcbn90gtc       4.032000  
+U389                      AOI22D0         tcbn90gtc       4.032000  
+U390                      ND4D0           tcbn90gtc       4.838400  
+U391                      AOI22D0         tcbn90gtc       4.032000  
+U392                      AO22D0          tcbn90gtc       5.644800  
+U393                      AOI221D0        tcbn90gtc       5.644800  
+U394                      AOI22D0         tcbn90gtc       4.032000  
+U395                      IND4D0          tcbn90gtc       5.644800  
+U396                      AOI22D0         tcbn90gtc       4.032000  
+U397                      AOI22D0         tcbn90gtc       4.032000  
+U398                      AOI22D0         tcbn90gtc       4.032000  
+U399                      AOI22D0         tcbn90gtc       4.032000  
+U400                      ND4D0           tcbn90gtc       4.838400  
+U401                      AOI22D0         tcbn90gtc       4.032000  
+U402                      AO22D0          tcbn90gtc       5.644800  
+U403                      AOI221D0        tcbn90gtc       5.644800  
+U404                      AOI22D0         tcbn90gtc       4.032000  
+U405                      IND4D0          tcbn90gtc       5.644800  
+U406                      AOI22D0         tcbn90gtc       4.032000  
+U407                      AOI22D0         tcbn90gtc       4.032000  
+U408                      AOI22D0         tcbn90gtc       4.032000  
+U409                      AOI22D0         tcbn90gtc       4.032000  
+U410                      ND4D0           tcbn90gtc       4.838400  
+U411                      AOI22D0         tcbn90gtc       4.032000  
+U412                      AO22D0          tcbn90gtc       5.644800  
+U413                      AOI221D0        tcbn90gtc       5.644800  
+U414                      AOI22D0         tcbn90gtc       4.032000  
+U415                      IND4D0          tcbn90gtc       5.644800  
+U416                      AOI22D0         tcbn90gtc       4.032000  
+U417                      AOI22D0         tcbn90gtc       4.032000  
+U418                      AOI22D0         tcbn90gtc       4.032000  
+U419                      AOI22D0         tcbn90gtc       4.032000  
+U420                      ND4D0           tcbn90gtc       4.838400  
+U421                      AOI22D0         tcbn90gtc       4.032000  
+U422                      AO22D0          tcbn90gtc       5.644800  
+U423                      AOI221D0        tcbn90gtc       5.644800  
+U424                      AOI22D0         tcbn90gtc       4.032000  
+U425                      IND4D0          tcbn90gtc       5.644800  
+U426                      AOI22D0         tcbn90gtc       4.032000  
+U427                      AOI22D0         tcbn90gtc       4.032000  
+U428                      AOI22D0         tcbn90gtc       4.032000  
+U429                      AOI22D0         tcbn90gtc       4.032000  
+U430                      ND4D0           tcbn90gtc       4.838400  
+U431                      AOI22D0         tcbn90gtc       4.032000  
+U432                      AO22D0          tcbn90gtc       5.644800  
+U433                      AOI221D0        tcbn90gtc       5.644800  
+U434                      AOI22D0         tcbn90gtc       4.032000  
+U435                      IND4D0          tcbn90gtc       5.644800  
+U436                      AOI22D0         tcbn90gtc       4.032000  
+U437                      AOI22D0         tcbn90gtc       4.032000  
+U438                      AOI22D0         tcbn90gtc       4.032000  
+U439                      AOI22D0         tcbn90gtc       4.032000  
+U440                      ND4D0           tcbn90gtc       4.838400  
+U441                      AOI22D0         tcbn90gtc       4.032000  
+U442                      AO22D0          tcbn90gtc       5.644800  
+U443                      AOI221D0        tcbn90gtc       5.644800  
+U444                      AOI22D0         tcbn90gtc       4.032000  
+U445                      IND4D0          tcbn90gtc       5.644800  
+U446                      AOI22D0         tcbn90gtc       4.032000  
+U447                      AOI22D0         tcbn90gtc       4.032000  
+U448                      AOI22D0         tcbn90gtc       4.032000  
+U449                      AOI22D0         tcbn90gtc       4.032000  
+U450                      ND4D0           tcbn90gtc       4.838400  
+U451                      AOI22D0         tcbn90gtc       4.032000  
+U452                      AO22D0          tcbn90gtc       5.644800  
+U453                      AOI221D0        tcbn90gtc       5.644800  
+U454                      AOI22D0         tcbn90gtc       4.032000  
+U455                      IND4D0          tcbn90gtc       5.644800  
+U456                      AOI22D0         tcbn90gtc       4.032000  
+U457                      AOI22D0         tcbn90gtc       4.032000  
+U458                      AOI22D0         tcbn90gtc       4.032000  
+U459                      AOI22D0         tcbn90gtc       4.032000  
+U460                      ND4D0           tcbn90gtc       4.838400  
+U461                      AOI22D0         tcbn90gtc       4.032000  
+U462                      AO22D0          tcbn90gtc       5.644800  
+U463                      AOI221D0        tcbn90gtc       5.644800  
+U464                      AOI22D0         tcbn90gtc       4.032000  
+U465                      IND4D0          tcbn90gtc       5.644800  
+U466                      AOI22D0         tcbn90gtc       4.032000  
+U467                      AOI22D0         tcbn90gtc       4.032000  
+U468                      AOI22D0         tcbn90gtc       4.032000  
+U469                      AOI22D0         tcbn90gtc       4.032000  
+U470                      ND4D0           tcbn90gtc       4.838400  
+U471                      AOI22D0         tcbn90gtc       4.032000  
+U472                      AO22D0          tcbn90gtc       5.644800  
+U473                      AOI221D0        tcbn90gtc       5.644800  
+U474                      AOI22D0         tcbn90gtc       4.032000  
+U475                      IND4D0          tcbn90gtc       5.644800  
+U476                      AOI22D0         tcbn90gtc       4.032000  
+U477                      AOI22D0         tcbn90gtc       4.032000  
+U478                      AOI22D0         tcbn90gtc       4.032000  
+U479                      AOI22D0         tcbn90gtc       4.032000  
+U480                      ND4D0           tcbn90gtc       4.838400  
+U481                      AOI22D0         tcbn90gtc       4.032000  
+U482                      AO22D0          tcbn90gtc       5.644800  
+U483                      AOI221D0        tcbn90gtc       5.644800  
+U484                      AOI22D0         tcbn90gtc       4.032000  
+U485                      IND4D0          tcbn90gtc       5.644800  
+U486                      AOI22D0         tcbn90gtc       4.032000  
+U487                      AOI22D0         tcbn90gtc       4.032000  
+U488                      AOI22D0         tcbn90gtc       4.032000  
+U489                      AOI22D0         tcbn90gtc       4.032000  
+U490                      ND4D0           tcbn90gtc       4.838400  
+U491                      AOI22D0         tcbn90gtc       4.032000  
+U492                      AO22D0          tcbn90gtc       5.644800  
+U493                      AOI221D0        tcbn90gtc       5.644800  
+U494                      AOI22D0         tcbn90gtc       4.032000  
+U495                      IND4D0          tcbn90gtc       5.644800  
+U496                      AOI22D0         tcbn90gtc       4.032000  
+U497                      AOI22D0         tcbn90gtc       4.032000  
+U498                      AOI22D0         tcbn90gtc       4.032000  
+U499                      AOI22D0         tcbn90gtc       4.032000  
+U500                      ND4D0           tcbn90gtc       4.838400  
+U501                      AOI22D0         tcbn90gtc       4.032000  
+U502                      AO22D0          tcbn90gtc       5.644800  
+U503                      AOI221D0        tcbn90gtc       5.644800  
+U504                      AOI22D0         tcbn90gtc       4.032000  
+U505                      IND4D0          tcbn90gtc       5.644800  
+U506                      AOI22D0         tcbn90gtc       4.032000  
+U507                      AOI22D0         tcbn90gtc       4.032000  
+U508                      AOI22D0         tcbn90gtc       4.032000  
+U509                      AOI22D0         tcbn90gtc       4.032000  
+U510                      ND4D0           tcbn90gtc       4.838400  
+U511                      AOI22D0         tcbn90gtc       4.032000  
+U512                      AO22D0          tcbn90gtc       5.644800  
+U513                      AOI221D0        tcbn90gtc       5.644800  
+U514                      AOI22D0         tcbn90gtc       4.032000  
+U515                      IND4D0          tcbn90gtc       5.644800  
+U516                      AOI22D0         tcbn90gtc       4.032000  
+U517                      AOI22D0         tcbn90gtc       4.032000  
+U518                      AOI22D0         tcbn90gtc       4.032000  
+U519                      AOI22D0         tcbn90gtc       4.032000  
+U520                      ND4D0           tcbn90gtc       4.838400  
+U521                      AOI22D0         tcbn90gtc       4.032000  
+U522                      AO22D0          tcbn90gtc       5.644800  
+U523                      AOI221D0        tcbn90gtc       5.644800  
+U524                      AOI22D0         tcbn90gtc       4.032000  
+U525                      IND4D0          tcbn90gtc       5.644800  
+U526                      AOI22D0         tcbn90gtc       4.032000  
+U527                      AOI22D0         tcbn90gtc       4.032000  
+U528                      AOI22D0         tcbn90gtc       4.032000  
+U529                      AOI22D0         tcbn90gtc       4.032000  
+U530                      ND4D0           tcbn90gtc       4.838400  
+U531                      AOI22D0         tcbn90gtc       4.032000  
+U532                      AO22D0          tcbn90gtc       5.644800  
+U533                      AOI221D0        tcbn90gtc       5.644800  
+U534                      AOI22D0         tcbn90gtc       4.032000  
+U535                      IND4D0          tcbn90gtc       5.644800  
+U536                      AOI22D0         tcbn90gtc       4.032000  
+U537                      AOI22D0         tcbn90gtc       4.032000  
+U538                      AOI22D0         tcbn90gtc       4.032000  
+U539                      AOI22D0         tcbn90gtc       4.032000  
+U540                      ND4D0           tcbn90gtc       4.838400  
+U541                      AOI22D0         tcbn90gtc       4.032000  
+U542                      AO22D0          tcbn90gtc       5.644800  
+U543                      AOI221D0        tcbn90gtc       5.644800  
+U544                      AOI22D0         tcbn90gtc       4.032000  
+U545                      IND4D0          tcbn90gtc       5.644800  
+U546                      AOI22D0         tcbn90gtc       4.032000  
+U547                      AOI22D0         tcbn90gtc       4.032000  
+U548                      AOI22D0         tcbn90gtc       4.032000  
+U549                      AOI22D0         tcbn90gtc       4.032000  
+U550                      ND4D0           tcbn90gtc       4.838400  
+U551                      AOI22D0         tcbn90gtc       4.032000  
+U552                      AO22D0          tcbn90gtc       5.644800  
+U553                      AOI221D0        tcbn90gtc       5.644800  
+U554                      AOI22D0         tcbn90gtc       4.032000  
+U555                      IND4D0          tcbn90gtc       5.644800  
+U556                      AOI22D0         tcbn90gtc       4.032000  
+U557                      AOI22D0         tcbn90gtc       4.032000  
+U558                      AOI22D0         tcbn90gtc       4.032000  
+U559                      AOI22D0         tcbn90gtc       4.032000  
+U560                      ND4D0           tcbn90gtc       4.838400  
+U561                      AOI22D0         tcbn90gtc       4.032000  
+U562                      AO22D0          tcbn90gtc       5.644800  
+U563                      AOI221D0        tcbn90gtc       5.644800  
+U564                      AOI22D0         tcbn90gtc       4.032000  
+U565                      IND4D0          tcbn90gtc       5.644800  
+U566                      AOI22D0         tcbn90gtc       4.032000  
+U567                      AOI22D0         tcbn90gtc       4.032000  
+U568                      AOI22D0         tcbn90gtc       4.032000  
+U569                      AOI22D0         tcbn90gtc       4.032000  
+U570                      ND4D0           tcbn90gtc       4.838400  
+U571                      AOI22D0         tcbn90gtc       4.032000  
+U572                      AO22D0          tcbn90gtc       5.644800  
+U573                      AOI221D0        tcbn90gtc       5.644800  
+U574                      AOI22D0         tcbn90gtc       4.032000  
+U575                      IND4D0          tcbn90gtc       5.644800  
+U576                      AOI22D0         tcbn90gtc       4.032000  
+U577                      AOI22D0         tcbn90gtc       4.032000  
+U578                      AOI22D0         tcbn90gtc       4.032000  
+U579                      AOI22D0         tcbn90gtc       4.032000  
+U580                      ND4D0           tcbn90gtc       4.838400  
+U581                      AOI22D0         tcbn90gtc       4.032000  
+U582                      AO22D0          tcbn90gtc       5.644800  
+U583                      AOI221D0        tcbn90gtc       5.644800  
+U584                      AOI22D0         tcbn90gtc       4.032000  
+U585                      IND4D0          tcbn90gtc       5.644800  
+U586                      AOI22D0         tcbn90gtc       4.032000  
+U587                      AOI22D0         tcbn90gtc       4.032000  
+U588                      AOI22D0         tcbn90gtc       4.032000  
+U589                      AOI22D0         tcbn90gtc       4.032000  
+U590                      ND4D0           tcbn90gtc       4.838400  
+U591                      AOI22D0         tcbn90gtc       4.032000  
+U592                      AO22D0          tcbn90gtc       5.644800  
+U593                      AOI221D0        tcbn90gtc       5.644800  
+U594                      AOI22D0         tcbn90gtc       4.032000  
+U595                      IND4D0          tcbn90gtc       5.644800  
+U596                      AOI22D0         tcbn90gtc       4.032000  
+U597                      AOI22D0         tcbn90gtc       4.032000  
+U598                      AOI22D0         tcbn90gtc       4.032000  
+U599                      AOI22D0         tcbn90gtc       4.032000  
+U600                      ND4D0           tcbn90gtc       4.838400  
+U601                      AOI22D0         tcbn90gtc       4.032000  
+U602                      AO22D0          tcbn90gtc       5.644800  
+U603                      AOI221D0        tcbn90gtc       5.644800  
+U604                      AOI22D0         tcbn90gtc       4.032000  
+U605                      IND4D0          tcbn90gtc       5.644800  
+U606                      AOI22D0         tcbn90gtc       4.032000  
+U607                      AOI22D0         tcbn90gtc       4.032000  
+U608                      AOI22D0         tcbn90gtc       4.032000  
+U609                      AOI22D0         tcbn90gtc       4.032000  
+U610                      ND4D0           tcbn90gtc       4.838400  
+U611                      AOI22D0         tcbn90gtc       4.032000  
+U612                      AO22D0          tcbn90gtc       5.644800  
+U613                      AOI221D0        tcbn90gtc       5.644800  
+U614                      AOI22D0         tcbn90gtc       4.032000  
+U615                      IND4D0          tcbn90gtc       5.644800  
+U616                      AOI22D0         tcbn90gtc       4.032000  
+U617                      AOI22D0         tcbn90gtc       4.032000  
+U618                      AOI22D0         tcbn90gtc       4.032000  
+U619                      AOI22D0         tcbn90gtc       4.032000  
+U620                      ND4D0           tcbn90gtc       4.838400  
+U621                      AOI22D0         tcbn90gtc       4.032000  
+U622                      AO22D0          tcbn90gtc       5.644800  
+U623                      AOI221D0        tcbn90gtc       5.644800  
+U624                      AOI22D0         tcbn90gtc       4.032000  
+U625                      IND4D0          tcbn90gtc       5.644800  
+U626                      AOI22D0         tcbn90gtc       4.032000  
+U627                      AOI22D0         tcbn90gtc       4.032000  
+U628                      AOI22D0         tcbn90gtc       4.032000  
+U629                      AOI22D0         tcbn90gtc       4.032000  
+U630                      ND4D0           tcbn90gtc       4.838400  
+U631                      AOI22D0         tcbn90gtc       4.032000  
+U632                      AO22D0          tcbn90gtc       5.644800  
+U633                      AOI221D0        tcbn90gtc       5.644800  
+U634                      AOI22D0         tcbn90gtc       4.032000  
+U635                      IND4D0          tcbn90gtc       5.644800  
+U636                      AOI22D0         tcbn90gtc       4.032000  
+U637                      AOI22D0         tcbn90gtc       4.032000  
+U638                      AOI22D0         tcbn90gtc       4.032000  
+U639                      AOI22D0         tcbn90gtc       4.032000  
+U640                      ND4D0           tcbn90gtc       4.838400  
+U641                      AOI22D0         tcbn90gtc       4.032000  
+U642                      AO22D0          tcbn90gtc       5.644800  
+U643                      AOI221D0        tcbn90gtc       5.644800  
+U644                      AOI22D0         tcbn90gtc       4.032000  
+U645                      IND4D0          tcbn90gtc       5.644800  
+U646                      OAI33D4         tcbn90gtc       11.289600 
+U647                      CKXOR2D0        tcbn90gtc       7.257600  
+add_65/U1_1_1             CMPE22D1        tcbn90gtc       11.289600 mo, r
+add_65/U1_1_2             CMPE22D1        tcbn90gtc       11.289600 mo, r
+add_65/U1_1_3             CMPE22D1        tcbn90gtc       11.289600 mo, r
+curr_state_reg[0]         DFCNQD1         tcbn90gtc       16.128000 n
+curr_state_reg[1]         DFCNQD1         tcbn90gtc       16.128000 n
+done_reg                  DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[0]       DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[1]       DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[2]       DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[3]       DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[4]       DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[5]       DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[6]       DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[7]       DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[8]       DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[9]       DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[10]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[11]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[12]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[13]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[14]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[15]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[16]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[17]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[18]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[19]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[20]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[21]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[22]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[23]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[24]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[25]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[26]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[27]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[28]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[29]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[30]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[31]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[32]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[33]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[34]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[35]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[36]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[37]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[38]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[39]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[40]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[41]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[42]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[43]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[44]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[45]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[46]      DFCNQD1         tcbn90gtc       16.128000 n
+feedback_reg_reg[47]      DFCNQD1         tcbn90gtc       16.128000 n
+i_reg_reg[0]              DFCNQD1         tcbn90gtc       16.128000 n
+i_reg_reg[1]              DFCNQD1         tcbn90gtc       16.128000 n
+i_reg_reg[2]              DFCNQD1         tcbn90gtc       16.128000 n
+i_reg_reg[3]              DFCNQD1         tcbn90gtc       16.128000 n
+i_reg_reg[4]              DFCNQD1         tcbn90gtc       16.128000 n
+mac                       MAC_16_6_10_6_10                4876.300816
+                                                                    h, p
+my_func                   ReLU_16_6_10                    49.996800 h, p
+out_reg[0]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[1]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[2]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[3]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[4]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[5]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[6]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[7]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[8]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[9]                DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[10]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[11]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[12]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[13]               DFCNQD1         tcbn90gtc       16.128000 n
+out_reg[14]               DFCNQD1         tcbn90gtc       16.128000 n
+--------------------------------------------------------------------------------
+Total 594 cells                                           8274.470463
+1

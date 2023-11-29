@@ -1,0 +1,219 @@
+Loading db file '/afs/it.kth.se/pkg/synopsys/extra_libraries/standard_cell/TSMC/tcbn90g_110a/Front_End/timing_power/tcbn90g_110a/tcbn90gtc.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fully_parallel_32_3_5
+Version: R-2020.09-SP5-3
+Date   : Wed Nov 29 16:13:57 2023
+****************************************
+
+
+Library(s) Used:
+
+    tcbn90gtc (File: /afs/it.kth.se/pkg/synopsys/extra_libraries/standard_cell/TSMC/tcbn90g_110a/Front_End/timing_power/tcbn90g_110a/tcbn90gtc.db)
+
+
+Operating Conditions: NCCOM   Library: tcbn90gtc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+fully_parallel_32_3_5  TSMC8K_Lowk_Aggresive
+                                         tcbn90gtc
+MAC_32_3_5_6_10_0      ZeroWireload      tcbn90gtc
+ReLU_32_3_5            ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_1      ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_2      ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_3      ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_4      ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_5      ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_6      ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_7      ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_8      ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_9      ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_10     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_11     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_12     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_13     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_14     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_15     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_16     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_17     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_18     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_19     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_20     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_21     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_22     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_23     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_24     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_25     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_26     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_27     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_28     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_29     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_30     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_31     ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_0_DW01_add_0
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_0_DW_mult_tc_0
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_31_DW01_add_0_DW01_add_1
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_31_DW_mult_tc_0_DW_mult_tc_1
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_30_DW01_add_0_DW01_add_2
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_30_DW_mult_tc_0_DW_mult_tc_2
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_29_DW01_add_0_DW01_add_3
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_29_DW_mult_tc_0_DW_mult_tc_3
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_28_DW01_add_0_DW01_add_4
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_28_DW_mult_tc_0_DW_mult_tc_4
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_27_DW01_add_0_DW01_add_5
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_27_DW_mult_tc_0_DW_mult_tc_5
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_26_DW01_add_0_DW01_add_6
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_26_DW_mult_tc_0_DW_mult_tc_6
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_25_DW01_add_0_DW01_add_7
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_25_DW_mult_tc_0_DW_mult_tc_7
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_24_DW01_add_0_DW01_add_8
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_24_DW_mult_tc_0_DW_mult_tc_8
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_23_DW01_add_0_DW01_add_9
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_23_DW_mult_tc_0_DW_mult_tc_9
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_22_DW01_add_0_DW01_add_10
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_22_DW_mult_tc_0_DW_mult_tc_10
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_21_DW01_add_0_DW01_add_11
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_21_DW_mult_tc_0_DW_mult_tc_11
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_20_DW01_add_0_DW01_add_12
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_20_DW_mult_tc_0_DW_mult_tc_12
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_19_DW01_add_0_DW01_add_13
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_19_DW_mult_tc_0_DW_mult_tc_13
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_18_DW01_add_0_DW01_add_14
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_18_DW_mult_tc_0_DW_mult_tc_14
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_17_DW01_add_0_DW01_add_15
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_17_DW_mult_tc_0_DW_mult_tc_15
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_16_DW01_add_0_DW01_add_16
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_16_DW_mult_tc_0_DW_mult_tc_16
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_15_DW01_add_0_DW01_add_17
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_15_DW_mult_tc_0_DW_mult_tc_17
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_14_DW01_add_0_DW01_add_18
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_14_DW_mult_tc_0_DW_mult_tc_18
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_13_DW01_add_0_DW01_add_19
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_13_DW_mult_tc_0_DW_mult_tc_19
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_12_DW01_add_0_DW01_add_20
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_12_DW_mult_tc_0_DW_mult_tc_20
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_11_DW01_add_0_DW01_add_21
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_11_DW_mult_tc_0_DW_mult_tc_21
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_10_DW01_add_0_DW01_add_22
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_10_DW_mult_tc_0_DW_mult_tc_22
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_9_DW01_add_0_DW01_add_23
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_9_DW_mult_tc_0_DW_mult_tc_23
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_8_DW01_add_0_DW01_add_24
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_8_DW_mult_tc_0_DW_mult_tc_24
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_7_DW01_add_0_DW01_add_25
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_7_DW_mult_tc_0_DW_mult_tc_25
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_6_DW01_add_0_DW01_add_26
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_6_DW_mult_tc_0_DW_mult_tc_26
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_5_DW01_add_0_DW01_add_27
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_5_DW_mult_tc_0_DW_mult_tc_27
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_4_DW01_add_0_DW01_add_28
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_4_DW_mult_tc_0_DW_mult_tc_28
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_3_DW01_add_0_DW01_add_29
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_3_DW_mult_tc_0_DW_mult_tc_29
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_2_DW01_add_0_DW01_add_30
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_2_DW_mult_tc_0_DW_mult_tc_30
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_1_DW01_add_0_DW01_add_31
+                       ZeroWireload      tcbn90gtc
+MAC_32_3_5_6_10_1_DW_mult_tc_0_DW_mult_tc_31
+                       ZeroWireload      tcbn90gtc
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  = 365.9244 uW   (77%)
+  Net Switching Power  = 106.5012 uW   (23%)
+                         ---------
+Total Dynamic Power    = 472.4257 uW  (100%)
+
+Cell Leakage Power     = 301.7711 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       1.0913e-03        4.1466e-06          163.7012        1.2592e-03  (   0.16%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.3648            0.1065        3.0161e+05            0.7729  (  99.84%)
+--------------------------------------------------------------------------------------------------
+Total              0.3659 mW         0.1065 mW     3.0177e+05 nW         0.7742 mW
+1
