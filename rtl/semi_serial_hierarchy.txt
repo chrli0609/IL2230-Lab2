@@ -1,0 +1,4 @@
+MAC.sv
+ReLU.sv
+sigmoid.sv
+semi_serial.sv
