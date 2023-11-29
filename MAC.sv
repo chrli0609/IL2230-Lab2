@@ -1,4 +1,4 @@
-module MAC #(parameter N = 2, parameter QM = 12, parameter QN = 20, parameter WM = 6, parameter WN = 10, parameter OB = 8)(
+module MAC #(parameter N = 2, parameter QM = 12, parameter QN = 20, parameter WM = 6, parameter WN = 10)(
     input logic signed [QM + QN - 1:0] in,
     input logic signed [WM + WN - 1:0] weights,
     input logic signed [QM + QN + WM + WN + N - 1 : 0] feedback,

@@ -1,6 +1,4 @@
-//`include "fully_parallel.sv"  // Include the design file
-
-module fully_parallel_tb #(parameter N = 2, QM = 6, QN = 10, WM = 6, WN = 10, OB = 8);
+module fully_parallel_tb #(parameter N = 2, QM = 6, QN = 10, WM = 6, WN = 10);
 
   // Testbench signals
   logic clk;
@@ -25,11 +23,10 @@ module fully_parallel_tb #(parameter N = 2, QM = 6, QN = 10, WM = 6, WN = 10, OB
 
 
   assign out_not_registered_tb = dut.out_not_registered;
-  assign mac_final_tb = dut.mac_final;
   assign mac_out_tb = dut.mac_out;
 
   // Instantiate the neuron module
-  fully_parallel #(N, QM, QN, WM, WN, OB) dut (
+  fully_parallel #(N, QM, QN, WM, WN) dut (
     .clk(clk),
     .rst_n(rst_n),
     .in(in_data),
