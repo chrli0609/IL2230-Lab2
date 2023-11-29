@@ -21,7 +21,7 @@ genvar i;
 generate
     //last iteration handles the bias
     for (i = 0; i <= N; i++) begin
-        if (i == N) MAC #(N, QM, QN, WM, WN, OB) mac (bias, {0, 1} << WN, mac_out[i-1], mac_out[i]);
+        if (i == N) MAC #(N, QM, QN, WM, WN, OB) mac (bias, {1'b0, 1'b1} << WN, mac_out[i-1], mac_out[i]);
         else if (i == 0) MAC #(N, QM, QN, WM, WN, OB) mac (in[i], weights[i], 0, mac_out[i]);
         else MAC #(N, QM, QN, WM, WN, OB) mac (in[i], weights[i], mac_out[i-1], mac_out[i]);
     end

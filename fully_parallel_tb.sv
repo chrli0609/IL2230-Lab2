@@ -19,7 +19,7 @@ module fully_parallel_tb #(parameter N = 2, QM = 6, QN = 10, WM = 6, WN = 10, OB
   real expected_out;
   logic [QM + QN - 1 :0] out_not_registered_tb;
   real mac_final_tb;
-  logic [QM + QN + WM + WN + N - 1:0] mac_out_tb [N-1:0];
+  logic [QM + QN + WM + WN + N - 1:0] mac_out_tb [N:0];
 
 
 
